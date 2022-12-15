@@ -22,107 +22,124 @@ Partial Class Menu
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button1 = New System.Windows.Forms.Button()
-        Me.Button2 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.tlpMenu = New System.Windows.Forms.TableLayoutPanel()
+        Me.bModificar = New System.Windows.Forms.Button()
+        Me.bRegistrar = New System.Windows.Forms.Button()
+        Me.bEliminar = New System.Windows.Forms.Button()
+        Me.bBuscar = New System.Windows.Forms.Button()
+        Me.bSalir = New System.Windows.Forms.Button()
+        Me.lSesion = New System.Windows.Forms.Label()
+        Me.tlpMenu.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TableLayoutPanel1
+        'tlpMenu
         '
-        Me.TableLayoutPanel1.ColumnCount = 3
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.Button1, 1, 2)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button2, 1, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button3, 1, 3)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button4, 1, 4)
-        Me.TableLayoutPanel1.Controls.Add(Me.Button5, 1, 6)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 8
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(184, 473)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.tlpMenu.ColumnCount = 3
+        Me.tlpMenu.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.tlpMenu.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpMenu.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.tlpMenu.Controls.Add(Me.bModificar, 1, 2)
+        Me.tlpMenu.Controls.Add(Me.bRegistrar, 1, 1)
+        Me.tlpMenu.Controls.Add(Me.bEliminar, 1, 3)
+        Me.tlpMenu.Controls.Add(Me.bBuscar, 1, 4)
+        Me.tlpMenu.Controls.Add(Me.bSalir, 1, 6)
+        Me.tlpMenu.Controls.Add(Me.lSesion, 1, 8)
+        Me.tlpMenu.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tlpMenu.Location = New System.Drawing.Point(0, 0)
+        Me.tlpMenu.Name = "tlpMenu"
+        Me.tlpMenu.RowCount = 10
+        Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle())
+        Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.tlpMenu.Size = New System.Drawing.Size(184, 473)
+        Me.tlpMenu.TabIndex = 0
         '
-        'Button1
+        'bModificar
         '
-        Me.Button1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button1.Location = New System.Drawing.Point(23, 121)
-        Me.Button1.Name = "Button1"
-        Me.Button1.Size = New System.Drawing.Size(138, 72)
-        Me.Button1.TabIndex = 1
-        Me.Button1.Text = "Button1"
-        Me.Button1.UseVisualStyleBackColor = True
+        Me.bModificar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bModificar.Location = New System.Drawing.Point(23, 98)
+        Me.bModificar.Name = "bModificar"
+        Me.bModificar.Size = New System.Drawing.Size(138, 49)
+        Me.bModificar.TabIndex = 1
+        Me.bModificar.Text = "Modificar"
+        Me.bModificar.UseVisualStyleBackColor = True
         '
-        'Button2
+        'bRegistrar
         '
-        Me.Button2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button2.Location = New System.Drawing.Point(23, 43)
-        Me.Button2.Name = "Button2"
-        Me.Button2.Size = New System.Drawing.Size(138, 72)
-        Me.Button2.TabIndex = 2
-        Me.Button2.Text = "Button2"
-        Me.Button2.UseVisualStyleBackColor = True
+        Me.bRegistrar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bRegistrar.Location = New System.Drawing.Point(23, 43)
+        Me.bRegistrar.Name = "bRegistrar"
+        Me.bRegistrar.Size = New System.Drawing.Size(138, 49)
+        Me.bRegistrar.TabIndex = 2
+        Me.bRegistrar.Text = "Registrar"
+        Me.bRegistrar.UseVisualStyleBackColor = True
         '
-        'Button3
+        'bEliminar
         '
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button3.Location = New System.Drawing.Point(23, 199)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(138, 72)
-        Me.Button3.TabIndex = 3
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.bEliminar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bEliminar.Location = New System.Drawing.Point(23, 153)
+        Me.bEliminar.Name = "bEliminar"
+        Me.bEliminar.Size = New System.Drawing.Size(138, 49)
+        Me.bEliminar.TabIndex = 3
+        Me.bEliminar.Text = "Eliminar"
+        Me.bEliminar.UseVisualStyleBackColor = True
         '
-        'Button4
+        'bBuscar
         '
-        Me.Button4.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button4.Location = New System.Drawing.Point(23, 277)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(138, 72)
-        Me.Button4.TabIndex = 4
-        Me.Button4.Text = "Button4"
-        Me.Button4.UseVisualStyleBackColor = True
+        Me.bBuscar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bBuscar.Location = New System.Drawing.Point(23, 208)
+        Me.bBuscar.Name = "bBuscar"
+        Me.bBuscar.Size = New System.Drawing.Size(138, 49)
+        Me.bBuscar.TabIndex = 4
+        Me.bBuscar.Text = "Buscar"
+        Me.bBuscar.UseVisualStyleBackColor = True
         '
-        'Button5
+        'bSalir
         '
-        Me.Button5.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button5.Location = New System.Drawing.Point(23, 375)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(138, 72)
-        Me.Button5.TabIndex = 5
-        Me.Button5.Text = "Button5"
-        Me.Button5.UseVisualStyleBackColor = True
+        Me.bSalir.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bSalir.Location = New System.Drawing.Point(23, 361)
+        Me.bSalir.Name = "bSalir"
+        Me.bSalir.Size = New System.Drawing.Size(138, 49)
+        Me.bSalir.TabIndex = 5
+        Me.bSalir.Text = "Salir"
+        Me.bSalir.UseVisualStyleBackColor = True
+        '
+        'lSesion
+        '
+        Me.lSesion.AutoSize = True
+        Me.lSesion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lSesion.Location = New System.Drawing.Point(23, 433)
+        Me.lSesion.Name = "lSesion"
+        Me.lSesion.Size = New System.Drawing.Size(138, 20)
+        Me.lSesion.TabIndex = 6
+        Me.lSesion.Text = "Sesion:"
+        Me.lSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Menu
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.tlpMenu)
         Me.Name = "Menu"
         Me.Size = New System.Drawing.Size(184, 473)
-        Me.TableLayoutPanel1.ResumeLayout(False)
+        Me.tlpMenu.ResumeLayout(False)
+        Me.tlpMenu.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents Button1 As Button
-    Friend WithEvents Button2 As Button
-    Friend WithEvents Button3 As Button
-    Friend WithEvents Button4 As Button
-    Friend WithEvents Button5 As Button
+    Friend WithEvents tlpMenu As TableLayoutPanel
+    Friend WithEvents bModificar As Button
+    Friend WithEvents bRegistrar As Button
+    Friend WithEvents bEliminar As Button
+    Friend WithEvents bBuscar As Button
+    Friend WithEvents bSalir As Button
+    Friend WithEvents lSesion As Label
 End Class
