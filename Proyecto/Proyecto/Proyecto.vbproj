@@ -73,29 +73,29 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="App.Designer.vb">
+    <Compile Include="Vista\App.Designer.vb">
       <DependentUpon>App.vb</DependentUpon>
     </Compile>
-    <Compile Include="App.vb">
+    <Compile Include="Vista\App.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="DatosEmpleado.Designer.vb">
+    <Compile Include="Control de usuario\DatosEmpleado.Designer.vb">
       <DependentUpon>DatosEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="DatosEmpleado.vb">
+    <Compile Include="Control de usuario\DatosEmpleado.vb">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="LoginForm.vb">
+    <Compile Include="Vista\LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LoginForm.Designer.vb">
+    <Compile Include="Vista\LoginForm.Designer.vb">
       <DependentUpon>LoginForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Menu.Designer.vb">
+    <Compile Include="Control de usuario\Menu.Designer.vb">
       <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Menu.vb">
+    <Compile Include="Control de usuario\Menu.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -116,16 +116,16 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="App.resx">
+    <EmbeddedResource Include="Vista\App.resx">
       <DependentUpon>App.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="DatosEmpleado.resx">
+    <EmbeddedResource Include="Control de usuario\DatosEmpleado.resx">
       <DependentUpon>DatosEmpleado.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LoginForm.resx">
+    <EmbeddedResource Include="Vista\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Menu.resx">
+    <EmbeddedResource Include="Control de usuario\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
