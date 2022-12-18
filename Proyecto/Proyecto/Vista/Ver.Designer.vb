@@ -27,7 +27,10 @@ Partial Class Ver
         Me.bSiguiente = New System.Windows.Forms.Button()
         Me.VerDatos1 = New Proyecto.VerDatos()
         Me.tlpBotones = New System.Windows.Forms.TableLayoutPanel()
-        Me.Button3 = New System.Windows.Forms.Button()
+        Me.bEditar = New System.Windows.Forms.Button()
+        Me.bRegistrar = New System.Windows.Forms.Button()
+        Me.bEliminar = New System.Windows.Forms.Button()
+        Me.bVer = New System.Windows.Forms.Button()
         Me.TableLayoutPanel1.SuspendLayout()
         Me.tlpBotones.SuspendLayout()
         Me.SuspendLayout()
@@ -80,31 +83,65 @@ Partial Class Ver
         '
         'tlpBotones
         '
-        Me.tlpBotones.ColumnCount = 5
-        Me.tlpBotones.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpBotones.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpBotones.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpBotones.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpBotones.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpBotones.Controls.Add(Me.Button3, 2, 0)
+        Me.tlpBotones.ColumnCount = 6
+        Me.tlpBotones.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.tlpBotones.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.tlpBotones.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.tlpBotones.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.tlpBotones.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.tlpBotones.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667!))
+        Me.tlpBotones.Controls.Add(Me.bEditar, 2, 0)
+        Me.tlpBotones.Controls.Add(Me.bRegistrar, 1, 0)
+        Me.tlpBotones.Controls.Add(Me.bEliminar, 3, 0)
+        Me.tlpBotones.Controls.Add(Me.bVer, 4, 0)
         Me.tlpBotones.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpBotones.Location = New System.Drawing.Point(84, 3)
         Me.tlpBotones.Name = "tlpBotones"
         Me.tlpBotones.RowCount = 1
         Me.tlpBotones.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpBotones.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.tlpBotones.Size = New System.Drawing.Size(632, 34)
         Me.tlpBotones.TabIndex = 4
         '
-        'Button3
+        'bEditar
         '
-        Me.Button3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.Button3.Location = New System.Drawing.Point(255, 3)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(120, 28)
-        Me.Button3.TabIndex = 0
-        Me.Button3.Text = "Button3"
-        Me.Button3.UseVisualStyleBackColor = True
+        Me.bEditar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bEditar.Location = New System.Drawing.Point(213, 3)
+        Me.bEditar.Name = "bEditar"
+        Me.bEditar.Size = New System.Drawing.Size(99, 28)
+        Me.bEditar.TabIndex = 0
+        Me.bEditar.Text = "Editar"
+        Me.bEditar.UseVisualStyleBackColor = True
+        '
+        'bRegistrar
+        '
+        Me.bRegistrar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bRegistrar.Location = New System.Drawing.Point(108, 3)
+        Me.bRegistrar.Name = "bRegistrar"
+        Me.bRegistrar.Size = New System.Drawing.Size(99, 28)
+        Me.bRegistrar.TabIndex = 1
+        Me.bRegistrar.Text = "Registrar"
+        Me.bRegistrar.UseVisualStyleBackColor = True
+        '
+        'bEliminar
+        '
+        Me.bEliminar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bEliminar.Location = New System.Drawing.Point(318, 3)
+        Me.bEliminar.Name = "bEliminar"
+        Me.bEliminar.RightToLeft = System.Windows.Forms.RightToLeft.No
+        Me.bEliminar.Size = New System.Drawing.Size(99, 28)
+        Me.bEliminar.TabIndex = 2
+        Me.bEliminar.Text = "Eliminar"
+        Me.bEliminar.UseVisualStyleBackColor = True
+        '
+        'bVer
+        '
+        Me.bVer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bVer.Location = New System.Drawing.Point(423, 3)
+        Me.bVer.Name = "bVer"
+        Me.bVer.Size = New System.Drawing.Size(99, 28)
+        Me.bVer.TabIndex = 3
+        Me.bVer.Text = "Ver"
+        Me.bVer.UseVisualStyleBackColor = True
         '
         'Ver
         '
@@ -126,5 +163,8 @@ Partial Class Ver
     Friend WithEvents bSiguiente As Button
     Friend WithEvents VerDatos1 As VerDatos
     Friend WithEvents tlpBotones As TableLayoutPanel
-    Friend WithEvents Button3 As Button
+    Friend WithEvents bEditar As Button
+    Friend WithEvents bRegistrar As Button
+    Friend WithEvents bEliminar As Button
+    Friend WithEvents bVer As Button
 End Class

@@ -1,0 +1,38 @@
+version: "3"
+services:
+    webserver:
+        build: . # Utiliza el Dockerfile incluido en este mismo directorio.
+        ports: 
+            - "8080:80" # EL puerto interno (del container) 80 será accesible en el puerto 8080 del host.
+        volumes:
+            - ./src:/var/www/html/ # El container sincronizará la carpeta src del host con /var/www/html/ del container.
+        depends_on:
+            - database # Primero deberá arrancar el container database
+        networks:
+            - default
+    database:
+        image: mysql:8.0.31
+        ports: 
+            - "3306:3306"
+        environment: # Pasamos al container variables de entorno:
+            MYSQL_DATABASE: ${MYSQL_DATABASE}
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+        volumes:
+            - dbdata:/var/lib/mysql
+    phpmyadmin:
+        image: phpmyadmin/phpmyadmin
+        links: # Ya no es necesario, desde la v2 pueden comunicarse con otros containers utilizando su nombre.
+            - database:database
+        ports:
+            - 8000:80
+        depends_on:
+            - database
+        environment:
+            PMA_HOST: database
+            MYSQL_USER: ${MYSQL_USER}
+            MYSQL_PASSWORD: ${MYSQL_PASSWORD}
+            MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD}
+volumes:
+    dbdata:

@@ -24,6 +24,7 @@ Partial Class App
     Private Sub InitializeComponent()
         Me.tlpPrincipal = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpContenido = New System.Windows.Forms.TableLayoutPanel()
+        Me.MenuLado = New Proyecto.Menu()
         Me.tlpNav = New System.Windows.Forms.TableLayoutPanel()
         Me.msMenu = New System.Windows.Forms.MenuStrip()
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -35,7 +36,6 @@ Partial Class App
         Me.AjustesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuLateralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lSesion = New System.Windows.Forms.Label()
-        Me.Menu = New Proyecto.Menu()
         Me.tlpPrincipal.SuspendLayout()
         Me.tlpContenido.SuspendLayout()
         Me.tlpNav.SuspendLayout()
@@ -64,15 +64,22 @@ Partial Class App
         Me.tlpContenido.ColumnCount = 2
         Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
-        Me.tlpContenido.Controls.Add(Me.Menu, 0, 0)
+        Me.tlpContenido.Controls.Add(Me.MenuLado, 0, 0)
         Me.tlpContenido.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpContenido.Location = New System.Drawing.Point(3, 43)
         Me.tlpContenido.Name = "tlpContenido"
         Me.tlpContenido.RowCount = 1
         Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 404.0!))
+        Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 384.0!))
         Me.tlpContenido.Size = New System.Drawing.Size(794, 384)
         Me.tlpContenido.TabIndex = 0
+        '
+        'MenuLado
+        '
+        Me.MenuLado.Location = New System.Drawing.Point(3, 3)
+        Me.MenuLado.Name = "MenuLado"
+        Me.MenuLado.Size = New System.Drawing.Size(152, 378)
+        Me.MenuLado.TabIndex = 0
         '
         'tlpNav
         '
@@ -146,7 +153,7 @@ Partial Class App
         'MenuLateralToolStripMenuItem
         '
         Me.MenuLateralToolStripMenuItem.Name = "MenuLateralToolStripMenuItem"
-        Me.MenuLateralToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
+        Me.MenuLateralToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
         Me.MenuLateralToolStripMenuItem.Text = "MenuLateral"
         '
         'lSesion
@@ -158,13 +165,6 @@ Partial Class App
         Me.lSesion.Size = New System.Drawing.Size(794, 20)
         Me.lSesion.TabIndex = 2
         Me.lSesion.Text = "Sesion: "
-        '
-        'Menu
-        '
-        Me.Menu.Location = New System.Drawing.Point(3, 3)
-        Me.Menu.Name = "Menu"
-        Me.Menu.Size = New System.Drawing.Size(152, 378)
-        Me.Menu.TabIndex = 0
         '
         'App
         '
@@ -198,5 +198,5 @@ Partial Class App
     Friend WithEvents AjustesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuLateralToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lSesion As Label
-    Friend WithEvents Menu As Menu
+    Friend WithEvents MenuLado As Menu
 End Class
