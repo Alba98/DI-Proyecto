@@ -73,6 +73,12 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Control de usuario\Ver.Designer.vb">
+      <DependentUpon>Ver.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Control de usuario\Ver.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Vista\App.Designer.vb">
       <DependentUpon>App.vb</DependentUpon>
     </Compile>
