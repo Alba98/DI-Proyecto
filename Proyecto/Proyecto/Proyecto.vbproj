@@ -85,6 +85,12 @@
     <Compile Include="Control de usuario\DatosEmpleado.vb">
       <SubType>UserControl</SubType>
     </Compile>
+    <Compile Include="Vista\Editar.Designer.vb">
+      <DependentUpon>Editar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Editar.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Vista\LoginForm.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +133,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Control de usuario\DatosEmpleado.resx">
       <DependentUpon>DatosEmpleado.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Editar.resx">
+      <DependentUpon>Editar.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
