@@ -1,9 +1,9 @@
-﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()> _
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
 Partial Class Menu
     Inherits System.Windows.Forms.UserControl
 
     'UserControl reemplaza a Dispose para limpiar la lista de componentes.
-    <System.Diagnostics.DebuggerNonUserCode()> _
+    <System.Diagnostics.DebuggerNonUserCode()>
     Protected Overrides Sub Dispose(ByVal disposing As Boolean)
         Try
             If disposing AndAlso components IsNot Nothing Then
@@ -20,7 +20,7 @@ Partial Class Menu
     'NOTA: el Diseñador de Windows Forms necesita el siguiente procedimiento
     'Se puede modificar usando el Diseñador de Windows Forms.  
     'No lo modifique con el editor de código.
-    <System.Diagnostics.DebuggerStepThrough()> _
+    <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
         Me.tlpMenu = New System.Windows.Forms.TableLayoutPanel()
         Me.bModificar = New System.Windows.Forms.Button()
@@ -28,7 +28,6 @@ Partial Class Menu
         Me.bEliminar = New System.Windows.Forms.Button()
         Me.bBuscar = New System.Windows.Forms.Button()
         Me.bSalir = New System.Windows.Forms.Button()
-        Me.lSesion = New System.Windows.Forms.Label()
         Me.tlpMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -43,11 +42,10 @@ Partial Class Menu
         Me.tlpMenu.Controls.Add(Me.bEliminar, 1, 3)
         Me.tlpMenu.Controls.Add(Me.bBuscar, 1, 4)
         Me.tlpMenu.Controls.Add(Me.bSalir, 1, 6)
-        Me.tlpMenu.Controls.Add(Me.lSesion, 1, 8)
         Me.tlpMenu.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpMenu.Location = New System.Drawing.Point(0, 0)
         Me.tlpMenu.Name = "tlpMenu"
-        Me.tlpMenu.RowCount = 10
+        Me.tlpMenu.RowCount = 8
         Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
         Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle())
         Me.tlpMenu.RowStyles.Add(New System.Windows.Forms.RowStyle())
@@ -104,23 +102,12 @@ Partial Class Menu
         'bSalir
         '
         Me.bSalir.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.bSalir.Location = New System.Drawing.Point(23, 361)
+        Me.bSalir.Location = New System.Drawing.Point(23, 401)
         Me.bSalir.Name = "bSalir"
         Me.bSalir.Size = New System.Drawing.Size(138, 49)
         Me.bSalir.TabIndex = 5
         Me.bSalir.Text = "Salir"
         Me.bSalir.UseVisualStyleBackColor = True
-        '
-        'lSesion
-        '
-        Me.lSesion.AutoSize = True
-        Me.lSesion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lSesion.Location = New System.Drawing.Point(23, 433)
-        Me.lSesion.Name = "lSesion"
-        Me.lSesion.Size = New System.Drawing.Size(138, 20)
-        Me.lSesion.TabIndex = 6
-        Me.lSesion.Text = "Sesion:"
-        Me.lSesion.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'Menu
         '
@@ -130,7 +117,6 @@ Partial Class Menu
         Me.Name = "Menu"
         Me.Size = New System.Drawing.Size(184, 473)
         Me.tlpMenu.ResumeLayout(False)
-        Me.tlpMenu.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -141,5 +127,4 @@ Partial Class Menu
     Friend WithEvents bEliminar As Button
     Friend WithEvents bBuscar As Button
     Friend WithEvents bSalir As Button
-    Friend WithEvents lSesion As Label
 End Class

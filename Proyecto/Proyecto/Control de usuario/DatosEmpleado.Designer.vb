@@ -39,7 +39,7 @@ Partial Class DatosEmpleado
         Me.tbTelefono = New System.Windows.Forms.TextBox()
         Me.tbContraseña = New System.Windows.Forms.TextBox()
         Me.cbPuesto = New System.Windows.Forms.ComboBox()
-        Me.mcFechaNacimiento = New System.Windows.Forms.MonthCalendar()
+        Me.DateTimePicker1 = New System.Windows.Forms.DateTimePicker()
         Me.tlpDatos.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -53,7 +53,7 @@ Partial Class DatosEmpleado
         Me.tlpDatos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.tlpDatos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.00001!))
         Me.tlpDatos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.tlpDatos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 27.0!))
+        Me.tlpDatos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 32.0!))
         Me.tlpDatos.Controls.Add(Me.lNombre, 1, 1)
         Me.tlpDatos.Controls.Add(Me.lApellido1, 1, 2)
         Me.tlpDatos.Controls.Add(Me.lApellido2, 1, 3)
@@ -70,7 +70,7 @@ Partial Class DatosEmpleado
         Me.tlpDatos.Controls.Add(Me.tbTelefono, 5, 2)
         Me.tlpDatos.Controls.Add(Me.tbContraseña, 5, 4)
         Me.tlpDatos.Controls.Add(Me.cbPuesto, 5, 3)
-        Me.tlpDatos.Controls.Add(Me.mcFechaNacimiento, 5, 1)
+        Me.tlpDatos.Controls.Add(Me.DateTimePicker1, 5, 1)
         Me.tlpDatos.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpDatos.Location = New System.Drawing.Point(0, 0)
         Me.tlpDatos.Name = "tlpDatos"
@@ -81,7 +81,7 @@ Partial Class DatosEmpleado
         Me.tlpDatos.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.tlpDatos.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.tlpDatos.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.tlpDatos.Size = New System.Drawing.Size(800, 450)
+        Me.tlpDatos.Size = New System.Drawing.Size(623, 278)
         Me.tlpDatos.TabIndex = 0
         '
         'lNombre
@@ -90,7 +90,7 @@ Partial Class DatosEmpleado
         Me.lNombre.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lNombre.Location = New System.Drawing.Point(23, 20)
         Me.lNombre.Name = "lNombre"
-        Me.lNombre.Size = New System.Drawing.Size(172, 102)
+        Me.lNombre.Size = New System.Drawing.Size(126, 59)
         Me.lNombre.TabIndex = 0
         Me.lNombre.Text = "Nombre"
         '
@@ -98,9 +98,9 @@ Partial Class DatosEmpleado
         '
         Me.lApellido1.AutoSize = True
         Me.lApellido1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lApellido1.Location = New System.Drawing.Point(23, 122)
+        Me.lApellido1.Location = New System.Drawing.Point(23, 79)
         Me.lApellido1.Name = "lApellido1"
-        Me.lApellido1.Size = New System.Drawing.Size(172, 102)
+        Me.lApellido1.Size = New System.Drawing.Size(126, 59)
         Me.lApellido1.TabIndex = 1
         Me.lApellido1.Text = "Primer Apellido"
         '
@@ -108,9 +108,9 @@ Partial Class DatosEmpleado
         '
         Me.lApellido2.AutoSize = True
         Me.lApellido2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lApellido2.Location = New System.Drawing.Point(23, 224)
+        Me.lApellido2.Location = New System.Drawing.Point(23, 138)
         Me.lApellido2.Name = "lApellido2"
-        Me.lApellido2.Size = New System.Drawing.Size(172, 102)
+        Me.lApellido2.Size = New System.Drawing.Size(126, 59)
         Me.lApellido2.TabIndex = 2
         Me.lApellido2.Text = "Segundo Apellido"
         '
@@ -118,9 +118,9 @@ Partial Class DatosEmpleado
         '
         Me.lEmail.AutoSize = True
         Me.lEmail.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lEmail.Location = New System.Drawing.Point(23, 326)
+        Me.lEmail.Location = New System.Drawing.Point(23, 197)
         Me.lEmail.Name = "lEmail"
-        Me.lEmail.Size = New System.Drawing.Size(172, 102)
+        Me.lEmail.Size = New System.Drawing.Size(126, 59)
         Me.lEmail.TabIndex = 3
         Me.lEmail.Text = "Email"
         '
@@ -128,9 +128,9 @@ Partial Class DatosEmpleado
         '
         Me.lFechaNacimiento.AutoSize = True
         Me.lFechaNacimiento.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lFechaNacimiento.Location = New System.Drawing.Point(399, 20)
+        Me.lFechaNacimiento.Location = New System.Drawing.Point(307, 20)
         Me.lFechaNacimiento.Name = "lFechaNacimiento"
-        Me.lFechaNacimiento.Size = New System.Drawing.Size(172, 102)
+        Me.lFechaNacimiento.Size = New System.Drawing.Size(126, 59)
         Me.lFechaNacimiento.TabIndex = 4
         Me.lFechaNacimiento.Text = "Fecha Nacimiento"
         '
@@ -138,9 +138,9 @@ Partial Class DatosEmpleado
         '
         Me.lTelefono.AutoSize = True
         Me.lTelefono.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lTelefono.Location = New System.Drawing.Point(399, 122)
+        Me.lTelefono.Location = New System.Drawing.Point(307, 79)
         Me.lTelefono.Name = "lTelefono"
-        Me.lTelefono.Size = New System.Drawing.Size(172, 102)
+        Me.lTelefono.Size = New System.Drawing.Size(126, 59)
         Me.lTelefono.TabIndex = 5
         Me.lTelefono.Text = "Telefono"
         '
@@ -148,9 +148,9 @@ Partial Class DatosEmpleado
         '
         Me.lPuesto.AutoSize = True
         Me.lPuesto.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lPuesto.Location = New System.Drawing.Point(399, 224)
+        Me.lPuesto.Location = New System.Drawing.Point(307, 138)
         Me.lPuesto.Name = "lPuesto"
-        Me.lPuesto.Size = New System.Drawing.Size(172, 102)
+        Me.lPuesto.Size = New System.Drawing.Size(126, 59)
         Me.lPuesto.TabIndex = 6
         Me.lPuesto.Text = "Puesto"
         '
@@ -158,16 +158,16 @@ Partial Class DatosEmpleado
         '
         Me.lClave.AutoSize = True
         Me.lClave.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lClave.Location = New System.Drawing.Point(399, 326)
+        Me.lClave.Location = New System.Drawing.Point(307, 197)
         Me.lClave.Name = "lClave"
-        Me.lClave.Size = New System.Drawing.Size(172, 102)
+        Me.lClave.Size = New System.Drawing.Size(126, 59)
         Me.lClave.TabIndex = 7
         Me.lClave.Text = "Contraseña"
         '
         'cbGenerarClave
         '
         Me.cbGenerarClave.AutoSize = True
-        Me.cbGenerarClave.Location = New System.Drawing.Point(755, 329)
+        Me.cbGenerarClave.Location = New System.Drawing.Point(571, 200)
         Me.cbGenerarClave.Name = "cbGenerarClave"
         Me.cbGenerarClave.Size = New System.Drawing.Size(14, 17)
         Me.cbGenerarClave.TabIndex = 8
@@ -177,66 +177,66 @@ Partial Class DatosEmpleado
         'tbNombre
         '
         Me.tbNombre.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tbNombre.Location = New System.Drawing.Point(201, 23)
+        Me.tbNombre.Location = New System.Drawing.Point(155, 23)
         Me.tbNombre.Name = "tbNombre"
-        Me.tbNombre.Size = New System.Drawing.Size(172, 20)
+        Me.tbNombre.Size = New System.Drawing.Size(126, 20)
         Me.tbNombre.TabIndex = 9
         '
         'tbApellido1
         '
         Me.tbApellido1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tbApellido1.Location = New System.Drawing.Point(201, 125)
+        Me.tbApellido1.Location = New System.Drawing.Point(155, 82)
         Me.tbApellido1.Name = "tbApellido1"
-        Me.tbApellido1.Size = New System.Drawing.Size(172, 20)
+        Me.tbApellido1.Size = New System.Drawing.Size(126, 20)
         Me.tbApellido1.TabIndex = 10
         '
         'tbApellido2
         '
         Me.tbApellido2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tbApellido2.Location = New System.Drawing.Point(201, 227)
+        Me.tbApellido2.Location = New System.Drawing.Point(155, 141)
         Me.tbApellido2.Name = "tbApellido2"
-        Me.tbApellido2.Size = New System.Drawing.Size(172, 20)
+        Me.tbApellido2.Size = New System.Drawing.Size(126, 20)
         Me.tbApellido2.TabIndex = 11
         '
         'tbDireccion
         '
         Me.tbDireccion.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tbDireccion.Location = New System.Drawing.Point(201, 329)
+        Me.tbDireccion.Location = New System.Drawing.Point(155, 200)
         Me.tbDireccion.Name = "tbDireccion"
-        Me.tbDireccion.Size = New System.Drawing.Size(172, 20)
+        Me.tbDireccion.Size = New System.Drawing.Size(126, 20)
         Me.tbDireccion.TabIndex = 12
         '
         'tbTelefono
         '
         Me.tbTelefono.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tbTelefono.Location = New System.Drawing.Point(577, 125)
+        Me.tbTelefono.Location = New System.Drawing.Point(439, 82)
         Me.tbTelefono.Name = "tbTelefono"
-        Me.tbTelefono.Size = New System.Drawing.Size(172, 20)
+        Me.tbTelefono.Size = New System.Drawing.Size(126, 20)
         Me.tbTelefono.TabIndex = 14
         '
         'tbContraseña
         '
         Me.tbContraseña.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tbContraseña.Location = New System.Drawing.Point(577, 329)
+        Me.tbContraseña.Location = New System.Drawing.Point(439, 200)
         Me.tbContraseña.Name = "tbContraseña"
-        Me.tbContraseña.Size = New System.Drawing.Size(172, 20)
+        Me.tbContraseña.Size = New System.Drawing.Size(126, 20)
         Me.tbContraseña.TabIndex = 15
         '
         'cbPuesto
         '
         Me.cbPuesto.Dock = System.Windows.Forms.DockStyle.Fill
         Me.cbPuesto.FormattingEnabled = True
-        Me.cbPuesto.Location = New System.Drawing.Point(577, 227)
+        Me.cbPuesto.Location = New System.Drawing.Point(439, 141)
         Me.cbPuesto.Name = "cbPuesto"
-        Me.cbPuesto.Size = New System.Drawing.Size(172, 21)
+        Me.cbPuesto.Size = New System.Drawing.Size(126, 21)
         Me.cbPuesto.TabIndex = 16
         '
-        'mcFechaNacimiento
+        'DateTimePicker1
         '
-        Me.mcFechaNacimiento.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.mcFechaNacimiento.Location = New System.Drawing.Point(583, 29)
-        Me.mcFechaNacimiento.Name = "mcFechaNacimiento"
-        Me.mcFechaNacimiento.TabIndex = 17
+        Me.DateTimePicker1.Location = New System.Drawing.Point(439, 23)
+        Me.DateTimePicker1.Name = "DateTimePicker1"
+        Me.DateTimePicker1.Size = New System.Drawing.Size(126, 20)
+        Me.DateTimePicker1.TabIndex = 17
         '
         'DatosEmpleado
         '
@@ -244,7 +244,7 @@ Partial Class DatosEmpleado
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.Controls.Add(Me.tlpDatos)
         Me.Name = "DatosEmpleado"
-        Me.Size = New System.Drawing.Size(800, 450)
+        Me.Size = New System.Drawing.Size(623, 278)
         Me.tlpDatos.ResumeLayout(False)
         Me.tlpDatos.PerformLayout()
         Me.ResumeLayout(False)
@@ -268,5 +268,5 @@ Partial Class DatosEmpleado
     Friend WithEvents tbTelefono As TextBox
     Friend WithEvents tbContraseña As TextBox
     Friend WithEvents cbPuesto As ComboBox
-    Friend WithEvents mcFechaNacimiento As MonthCalendar
+    Friend WithEvents DateTimePicker1 As DateTimePicker
 End Class
