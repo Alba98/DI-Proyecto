@@ -22,11 +22,10 @@ Partial Class App
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
-        Me.TableLayoutPanel2 = New System.Windows.Forms.TableLayoutPanel()
-        Me.Menu1 = New Proyecto.Menu()
-        Me.TableLayoutPanel3 = New System.Windows.Forms.TableLayoutPanel()
-        Me.MenuStrip1 = New System.Windows.Forms.MenuStrip()
+        Me.tlpPrincipal = New System.Windows.Forms.TableLayoutPanel()
+        Me.tlpContenido = New System.Windows.Forms.TableLayoutPanel()
+        Me.tlpNav = New System.Windows.Forms.TableLayoutPanel()
+        Me.msMenu = New System.Windows.Forms.MenuStrip()
         Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.InsertarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
@@ -36,80 +35,74 @@ Partial Class App
         Me.AjustesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuLateralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lSesion = New System.Windows.Forms.Label()
-        Me.TableLayoutPanel1.SuspendLayout()
-        Me.TableLayoutPanel2.SuspendLayout()
-        Me.TableLayoutPanel3.SuspendLayout()
-        Me.MenuStrip1.SuspendLayout()
+        Me.Menu1 = New Proyecto.Menu()
+        Me.tlpPrincipal.SuspendLayout()
+        Me.tlpContenido.SuspendLayout()
+        Me.tlpNav.SuspendLayout()
+        Me.msMenu.SuspendLayout()
         Me.SuspendLayout()
         '
-        'TableLayoutPanel1
+        'tlpPrincipal
         '
-        Me.TableLayoutPanel1.ColumnCount = 1
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel2, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.TableLayoutPanel3, 0, 0)
-        Me.TableLayoutPanel1.Controls.Add(Me.lSesion, 0, 2)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 3
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(800, 450)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.tlpPrincipal.ColumnCount = 1
+        Me.tlpPrincipal.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpPrincipal.Controls.Add(Me.tlpContenido, 0, 1)
+        Me.tlpPrincipal.Controls.Add(Me.tlpNav, 0, 0)
+        Me.tlpPrincipal.Controls.Add(Me.lSesion, 0, 2)
+        Me.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tlpPrincipal.Location = New System.Drawing.Point(0, 0)
+        Me.tlpPrincipal.Name = "tlpPrincipal"
+        Me.tlpPrincipal.RowCount = 3
+        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
+        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.tlpPrincipal.Size = New System.Drawing.Size(800, 450)
+        Me.tlpPrincipal.TabIndex = 0
         '
-        'TableLayoutPanel2
+        'tlpContenido
         '
-        Me.TableLayoutPanel2.ColumnCount = 2
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel2.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
-        Me.TableLayoutPanel2.Controls.Add(Me.Menu1, 0, 0)
-        Me.TableLayoutPanel2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel2.Location = New System.Drawing.Point(3, 43)
-        Me.TableLayoutPanel2.Name = "TableLayoutPanel2"
-        Me.TableLayoutPanel2.RowCount = 1
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel2.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 404.0!))
-        Me.TableLayoutPanel2.Size = New System.Drawing.Size(794, 384)
-        Me.TableLayoutPanel2.TabIndex = 0
+        Me.tlpContenido.ColumnCount = 2
+        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
+        Me.tlpContenido.Controls.Add(Me.Menu1, 0, 0)
+        Me.tlpContenido.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tlpContenido.Location = New System.Drawing.Point(3, 43)
+        Me.tlpContenido.Name = "tlpContenido"
+        Me.tlpContenido.RowCount = 1
+        Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 404.0!))
+        Me.tlpContenido.Size = New System.Drawing.Size(794, 384)
+        Me.tlpContenido.TabIndex = 0
         '
-        'Menu1
+        'tlpNav
         '
-        Me.Menu1.Location = New System.Drawing.Point(3, 3)
-        Me.Menu1.Name = "Menu1"
-        Me.Menu1.Size = New System.Drawing.Size(152, 374)
-        Me.Menu1.TabIndex = 0
+        Me.tlpNav.ColumnCount = 2
+        Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
+        Me.tlpNav.Controls.Add(Me.msMenu, 0, 0)
+        Me.tlpNav.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tlpNav.Location = New System.Drawing.Point(3, 3)
+        Me.tlpNav.Name = "tlpNav"
+        Me.tlpNav.RowCount = 1
+        Me.tlpNav.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
+        Me.tlpNav.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34.0!))
+        Me.tlpNav.Size = New System.Drawing.Size(794, 34)
+        Me.tlpNav.TabIndex = 1
         '
-        'TableLayoutPanel3
+        'msMenu
         '
-        Me.TableLayoutPanel3.ColumnCount = 2
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
-        Me.TableLayoutPanel3.Controls.Add(Me.MenuStrip1, 0, 0)
-        Me.TableLayoutPanel3.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel3.Location = New System.Drawing.Point(3, 3)
-        Me.TableLayoutPanel3.Name = "TableLayoutPanel3"
-        Me.TableLayoutPanel3.RowCount = 1
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.TableLayoutPanel3.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34.0!))
-        Me.TableLayoutPanel3.Size = New System.Drawing.Size(794, 34)
-        Me.TableLayoutPanel3.TabIndex = 1
-        '
-        'MenuStrip1
-        '
-        Me.MenuStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.VerToolStripMenuItem, Me.AjustesToolStripMenuItem})
-        Me.MenuStrip1.Location = New System.Drawing.Point(0, 0)
-        Me.MenuStrip1.Name = "MenuStrip1"
-        Me.MenuStrip1.Size = New System.Drawing.Size(397, 24)
-        Me.MenuStrip1.TabIndex = 3
-        Me.MenuStrip1.Text = "MenuStrip1"
+        Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.VerToolStripMenuItem, Me.AjustesToolStripMenuItem})
+        Me.msMenu.Location = New System.Drawing.Point(0, 0)
+        Me.msMenu.Name = "msMenu"
+        Me.msMenu.Size = New System.Drawing.Size(397, 24)
+        Me.msMenu.TabIndex = 3
+        Me.msMenu.Text = "MenuStrip1"
         '
         'EditarToolStripMenuItem
         '
         Me.EditarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsertarToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.EliminarToolStripMenuItem})
         Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(49, 10)
+        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
         Me.EditarToolStripMenuItem.Text = "Editar"
         '
         'InsertarToolStripMenuItem
@@ -134,7 +127,7 @@ Partial Class App
         '
         Me.VerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem})
         Me.VerToolStripMenuItem.Name = "VerToolStripMenuItem"
-        Me.VerToolStripMenuItem.Size = New System.Drawing.Size(35, 10)
+        Me.VerToolStripMenuItem.Size = New System.Drawing.Size(35, 20)
         Me.VerToolStripMenuItem.Text = "Ver"
         '
         'EmpleadosToolStripMenuItem
@@ -147,13 +140,13 @@ Partial Class App
         '
         Me.AjustesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuLateralToolStripMenuItem})
         Me.AjustesToolStripMenuItem.Name = "AjustesToolStripMenuItem"
-        Me.AjustesToolStripMenuItem.Size = New System.Drawing.Size(57, 10)
+        Me.AjustesToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
         Me.AjustesToolStripMenuItem.Text = "Ajustes"
         '
         'MenuLateralToolStripMenuItem
         '
         Me.MenuLateralToolStripMenuItem.Name = "MenuLateralToolStripMenuItem"
-        Me.MenuLateralToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
+        Me.MenuLateralToolStripMenuItem.Size = New System.Drawing.Size(180, 22)
         Me.MenuLateralToolStripMenuItem.Text = "MenuLateral"
         '
         'lSesion
@@ -166,30 +159,36 @@ Partial Class App
         Me.lSesion.TabIndex = 2
         Me.lSesion.Text = "Sesion: "
         '
+        'Menu1
+        '
+        Me.Menu1.Location = New System.Drawing.Point(3, 3)
+        Me.Menu1.Name = "Menu1"
+        Me.Menu1.Size = New System.Drawing.Size(152, 378)
+        Me.Menu1.TabIndex = 0
+        '
         'App
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.tlpPrincipal)
         Me.Name = "App"
         Me.Text = "App"
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
-        Me.TableLayoutPanel2.ResumeLayout(False)
-        Me.TableLayoutPanel3.ResumeLayout(False)
-        Me.TableLayoutPanel3.PerformLayout()
-        Me.MenuStrip1.ResumeLayout(False)
-        Me.MenuStrip1.PerformLayout()
+        Me.tlpPrincipal.ResumeLayout(False)
+        Me.tlpPrincipal.PerformLayout()
+        Me.tlpContenido.ResumeLayout(False)
+        Me.tlpNav.ResumeLayout(False)
+        Me.tlpNav.PerformLayout()
+        Me.msMenu.ResumeLayout(False)
+        Me.msMenu.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
-    Friend WithEvents TableLayoutPanel2 As TableLayoutPanel
-    Friend WithEvents Menu1 As Menu
-    Friend WithEvents TableLayoutPanel3 As TableLayoutPanel
-    Friend WithEvents MenuStrip1 As MenuStrip
+    Friend WithEvents tlpPrincipal As TableLayoutPanel
+    Friend WithEvents tlpContenido As TableLayoutPanel
+    Friend WithEvents tlpNav As TableLayoutPanel
+    Friend WithEvents msMenu As MenuStrip
     Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents InsertarToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents ModificarToolStripMenuItem As ToolStripMenuItem
@@ -199,4 +198,5 @@ Partial Class App
     Friend WithEvents AjustesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuLateralToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lSesion As Label
+    Friend WithEvents Menu1 As Menu
 End Class
