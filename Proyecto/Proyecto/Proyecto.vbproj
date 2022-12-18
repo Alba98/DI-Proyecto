@@ -73,10 +73,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control de usuario\Ver.Designer.vb">
-      <DependentUpon>Ver.vb</DependentUpon>
+    <Compile Include="Control de usuario\VerDatos.Designer.vb">
+      <DependentUpon>VerDatos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Control de usuario\Ver.vb">
+    <Compile Include="Control de usuario\VerDatos.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Vista\App.Designer.vb">
@@ -132,6 +132,12 @@
     <Compile Include="Vista\Registrar.vb">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Vista\Ver.Designer.vb">
+      <DependentUpon>Ver.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Ver.vb">
+      <SubType>Form</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="Vista\App.resx">
@@ -157,6 +163,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Registrar.resx">
       <DependentUpon>Registrar.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Ver.resx">
+      <DependentUpon>Ver.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

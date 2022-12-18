@@ -35,7 +35,7 @@ Partial Class App
         Me.AjustesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.MenuLateralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
         Me.lSesion = New System.Windows.Forms.Label()
-        Me.Menu1 = New Proyecto.Menu()
+        Me.Menu = New Proyecto.Menu()
         Me.tlpPrincipal.SuspendLayout()
         Me.tlpContenido.SuspendLayout()
         Me.tlpNav.SuspendLayout()
@@ -64,7 +64,7 @@ Partial Class App
         Me.tlpContenido.ColumnCount = 2
         Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
-        Me.tlpContenido.Controls.Add(Me.Menu1, 0, 0)
+        Me.tlpContenido.Controls.Add(Me.Menu, 0, 0)
         Me.tlpContenido.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpContenido.Location = New System.Drawing.Point(3, 43)
         Me.tlpContenido.Name = "tlpContenido"
@@ -159,12 +159,12 @@ Partial Class App
         Me.lSesion.TabIndex = 2
         Me.lSesion.Text = "Sesion: "
         '
-        'Menu1
+        'Menu
         '
-        Me.Menu1.Location = New System.Drawing.Point(3, 3)
-        Me.Menu1.Name = "Menu1"
-        Me.Menu1.Size = New System.Drawing.Size(152, 378)
-        Me.Menu1.TabIndex = 0
+        Me.Menu.Location = New System.Drawing.Point(3, 3)
+        Me.Menu.Name = "Menu"
+        Me.Menu.Size = New System.Drawing.Size(152, 378)
+        Me.Menu.TabIndex = 0
         '
         'App
         '
@@ -198,5 +198,5 @@ Partial Class App
     Friend WithEvents AjustesToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents MenuLateralToolStripMenuItem As ToolStripMenuItem
     Friend WithEvents lSesion As Label
-    Friend WithEvents Menu1 As Menu
+    Friend WithEvents Menu As Menu
 End Class
