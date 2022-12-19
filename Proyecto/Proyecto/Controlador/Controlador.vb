@@ -8,6 +8,15 @@ Public Class Controlador
     Shared dt As New DataTable
     Shared ireturn As Boolean
 
+    Friend Shared Sub login(usuario As String, clave As String)
+        If (usuario = "aalonso") Then
+            If (clave = "12345") Then
+                App.Show()
+                LoginForm.Close()
+            End If
+        End If
+    End Sub
+
     Friend Shared Function Insertar() As Boolean
 
         Dim sql As String = "INSERT INTO usuarios (usuario, nombre, apellidos, email, contrasena) VALUES (@usuario, @nombre, @apellidos, @email, @contrasena)"

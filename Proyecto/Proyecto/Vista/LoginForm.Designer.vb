@@ -72,7 +72,7 @@ Partial Class LoginForm
         Me.lTitulo.AutoSize = True
         Me.tlpLogin.SetColumnSpan(Me.lTitulo, 2)
         Me.lTitulo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lTitulo.Location = New System.Drawing.Point(98, 253)
+        Me.lTitulo.Location = New System.Drawing.Point(98, 233)
         Me.lTitulo.Name = "lTitulo"
         Me.lTitulo.Size = New System.Drawing.Size(184, 13)
         Me.lTitulo.TabIndex = 0
@@ -83,9 +83,9 @@ Partial Class LoginForm
         '
         Me.tlpLogin.SetColumnSpan(Me.pbLogo, 2)
         Me.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pbLogo.Location = New System.Drawing.Point(98, 23)
+        Me.pbLogo.Location = New System.Drawing.Point(98, 43)
         Me.pbLogo.Name = "pbLogo"
-        Me.pbLogo.Size = New System.Drawing.Size(184, 207)
+        Me.pbLogo.Size = New System.Drawing.Size(184, 167)
         Me.pbLogo.TabIndex = 1
         Me.pbLogo.TabStop = False
         '
@@ -93,7 +93,7 @@ Partial Class LoginForm
         '
         Me.tlpLogin.SetColumnSpan(Me.tUsuario, 2)
         Me.tUsuario.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tUsuario.Location = New System.Drawing.Point(98, 289)
+        Me.tUsuario.Location = New System.Drawing.Point(98, 269)
         Me.tUsuario.Name = "tUsuario"
         Me.tUsuario.Size = New System.Drawing.Size(184, 20)
         Me.tUsuario.TabIndex = 2
@@ -103,8 +103,9 @@ Partial Class LoginForm
         '
         Me.tlpLogin.SetColumnSpan(Me.tClave, 2)
         Me.tClave.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tClave.Location = New System.Drawing.Point(98, 335)
+        Me.tClave.Location = New System.Drawing.Point(98, 315)
         Me.tClave.Name = "tClave"
+        Me.tClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
         Me.tClave.Size = New System.Drawing.Size(184, 20)
         Me.tClave.TabIndex = 3
         Me.tClave.Text = "Contraseña"
@@ -112,7 +113,7 @@ Partial Class LoginForm
         'bAceptar
         '
         Me.bAceptar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.bAceptar.Location = New System.Drawing.Point(98, 381)
+        Me.bAceptar.Location = New System.Drawing.Point(98, 361)
         Me.bAceptar.Name = "bAceptar"
         Me.bAceptar.Size = New System.Drawing.Size(89, 46)
         Me.bAceptar.TabIndex = 4
@@ -122,7 +123,7 @@ Partial Class LoginForm
         'bSalir
         '
         Me.bSalir.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.bSalir.Location = New System.Drawing.Point(193, 381)
+        Me.bSalir.Location = New System.Drawing.Point(193, 361)
         Me.bSalir.Name = "bSalir"
         Me.bSalir.Size = New System.Drawing.Size(89, 46)
         Me.bSalir.TabIndex = 5
@@ -133,9 +134,9 @@ Partial Class LoginForm
         '
         Me.cbClave.AutoSize = True
         Me.cbClave.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cbClave.Location = New System.Drawing.Point(288, 271)
+        Me.cbClave.Location = New System.Drawing.Point(288, 315)
         Me.cbClave.Name = "cbClave"
-        Me.cbClave.Size = New System.Drawing.Size(14, 17)
+        Me.cbClave.Size = New System.Drawing.Size(14, 20)
         Me.cbClave.TabIndex = 6
         Me.cbClave.Text = "CheckBox1"
         Me.cbClave.UseVisualStyleBackColor = True
