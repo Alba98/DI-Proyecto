@@ -53,15 +53,6 @@ Namespace My
                 Return defaultInstance
             End Get
         End Property
-        
-        <Global.System.Configuration.ApplicationScopedSettingAttribute(),  _
-         Global.System.Diagnostics.DebuggerNonUserCodeAttribute(),  _
-         Global.System.Configuration.SpecialSettingAttribute(Global.System.Configuration.SpecialSetting.ConnectionString)>  _
-        Public ReadOnly Property conexion() As String
-            Get
-                Return CType(Me("conexion"),String)
-            End Get
-        End Property
     End Class
 End Namespace
 
