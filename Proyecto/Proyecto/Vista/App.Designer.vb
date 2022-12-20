@@ -25,16 +25,20 @@ Partial Class App
         Me.tlpPrincipal = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpContenido = New System.Windows.Forms.TableLayoutPanel()
         Me.MenuLado = New Proyecto.Menu()
+        Me.pContenido = New System.Windows.Forms.Panel()
         Me.tlpNav = New System.Windows.Forms.TableLayoutPanel()
         Me.msMenu = New System.Windows.Forms.MenuStrip()
-        Me.EditarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.InsertarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.ModificarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EliminarToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.VerToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.EmpleadosToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.AjustesToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
-        Me.MenuLateralToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miEditar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miInsertar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miModificar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miEliminar = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miVer = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miEmpleados = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miAjustes = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miMenuLateral = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miShow = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miHide = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.lSesion = New System.Windows.Forms.Label()
         Me.tlpPrincipal.SuspendLayout()
         Me.tlpContenido.SuspendLayout()
@@ -65,6 +69,7 @@ Partial Class App
         Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
         Me.tlpContenido.Controls.Add(Me.MenuLado, 0, 0)
+        Me.tlpContenido.Controls.Add(Me.pContenido, 1, 0)
         Me.tlpContenido.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpContenido.Location = New System.Drawing.Point(3, 43)
         Me.tlpContenido.Name = "tlpContenido"
@@ -76,10 +81,19 @@ Partial Class App
         '
         'MenuLado
         '
+        Me.MenuLado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.MenuLado.Location = New System.Drawing.Point(3, 3)
         Me.MenuLado.Name = "MenuLado"
         Me.MenuLado.Size = New System.Drawing.Size(152, 378)
         Me.MenuLado.TabIndex = 0
+        '
+        'pContenido
+        '
+        Me.pContenido.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pContenido.Location = New System.Drawing.Point(161, 3)
+        Me.pContenido.Name = "pContenido"
+        Me.pContenido.Size = New System.Drawing.Size(630, 378)
+        Me.pContenido.TabIndex = 1
         '
         'tlpNav
         '
@@ -98,63 +112,82 @@ Partial Class App
         '
         'msMenu
         '
-        Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EditarToolStripMenuItem, Me.VerToolStripMenuItem, Me.AjustesToolStripMenuItem})
+        Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miEditar, Me.miVer, Me.miAjustes, Me.miSalir})
         Me.msMenu.Location = New System.Drawing.Point(0, 0)
         Me.msMenu.Name = "msMenu"
         Me.msMenu.Size = New System.Drawing.Size(397, 24)
         Me.msMenu.TabIndex = 3
         Me.msMenu.Text = "MenuStrip1"
         '
-        'EditarToolStripMenuItem
+        'miEditar
         '
-        Me.EditarToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.InsertarToolStripMenuItem, Me.ModificarToolStripMenuItem, Me.EliminarToolStripMenuItem})
-        Me.EditarToolStripMenuItem.Name = "EditarToolStripMenuItem"
-        Me.EditarToolStripMenuItem.Size = New System.Drawing.Size(49, 20)
-        Me.EditarToolStripMenuItem.Text = "Editar"
+        Me.miEditar.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miInsertar, Me.miModificar, Me.miEliminar})
+        Me.miEditar.Name = "miEditar"
+        Me.miEditar.Size = New System.Drawing.Size(49, 20)
+        Me.miEditar.Text = "Editar"
         '
-        'InsertarToolStripMenuItem
+        'miInsertar
         '
-        Me.InsertarToolStripMenuItem.Name = "InsertarToolStripMenuItem"
-        Me.InsertarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.InsertarToolStripMenuItem.Text = "Insertar"
+        Me.miInsertar.Name = "miInsertar"
+        Me.miInsertar.Size = New System.Drawing.Size(125, 22)
+        Me.miInsertar.Text = "Insertar"
         '
-        'ModificarToolStripMenuItem
+        'miModificar
         '
-        Me.ModificarToolStripMenuItem.Name = "ModificarToolStripMenuItem"
-        Me.ModificarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.ModificarToolStripMenuItem.Text = "Modificar"
+        Me.miModificar.Name = "miModificar"
+        Me.miModificar.Size = New System.Drawing.Size(125, 22)
+        Me.miModificar.Text = "Modificar"
         '
-        'EliminarToolStripMenuItem
+        'miEliminar
         '
-        Me.EliminarToolStripMenuItem.Name = "EliminarToolStripMenuItem"
-        Me.EliminarToolStripMenuItem.Size = New System.Drawing.Size(125, 22)
-        Me.EliminarToolStripMenuItem.Text = "Eliminar"
+        Me.miEliminar.Name = "miEliminar"
+        Me.miEliminar.Size = New System.Drawing.Size(125, 22)
+        Me.miEliminar.Text = "Eliminar"
         '
-        'VerToolStripMenuItem
+        'miVer
         '
-        Me.VerToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.EmpleadosToolStripMenuItem})
-        Me.VerToolStripMenuItem.Name = "VerToolStripMenuItem"
-        Me.VerToolStripMenuItem.Size = New System.Drawing.Size(35, 20)
-        Me.VerToolStripMenuItem.Text = "Ver"
+        Me.miVer.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miEmpleados})
+        Me.miVer.Name = "miVer"
+        Me.miVer.Size = New System.Drawing.Size(35, 20)
+        Me.miVer.Text = "Ver"
         '
-        'EmpleadosToolStripMenuItem
+        'miEmpleados
         '
-        Me.EmpleadosToolStripMenuItem.Name = "EmpleadosToolStripMenuItem"
-        Me.EmpleadosToolStripMenuItem.Size = New System.Drawing.Size(132, 22)
-        Me.EmpleadosToolStripMenuItem.Text = "Empleados"
+        Me.miEmpleados.Name = "miEmpleados"
+        Me.miEmpleados.Size = New System.Drawing.Size(180, 22)
+        Me.miEmpleados.Text = "Empleados"
         '
-        'AjustesToolStripMenuItem
+        'miAjustes
         '
-        Me.AjustesToolStripMenuItem.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.MenuLateralToolStripMenuItem})
-        Me.AjustesToolStripMenuItem.Name = "AjustesToolStripMenuItem"
-        Me.AjustesToolStripMenuItem.Size = New System.Drawing.Size(57, 20)
-        Me.AjustesToolStripMenuItem.Text = "Ajustes"
+        Me.miAjustes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miMenuLateral})
+        Me.miAjustes.Name = "miAjustes"
+        Me.miAjustes.Size = New System.Drawing.Size(57, 20)
+        Me.miAjustes.Text = "Ajustes"
         '
-        'MenuLateralToolStripMenuItem
+        'miMenuLateral
         '
-        Me.MenuLateralToolStripMenuItem.Name = "MenuLateralToolStripMenuItem"
-        Me.MenuLateralToolStripMenuItem.Size = New System.Drawing.Size(140, 22)
-        Me.MenuLateralToolStripMenuItem.Text = "MenuLateral"
+        Me.miMenuLateral.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miShow, Me.miHide})
+        Me.miMenuLateral.Name = "miMenuLateral"
+        Me.miMenuLateral.Size = New System.Drawing.Size(180, 22)
+        Me.miMenuLateral.Text = "MenuLateral"
+        '
+        'miShow
+        '
+        Me.miShow.Name = "miShow"
+        Me.miShow.Size = New System.Drawing.Size(103, 22)
+        Me.miShow.Text = "Show"
+        '
+        'miHide
+        '
+        Me.miHide.Name = "miHide"
+        Me.miHide.Size = New System.Drawing.Size(103, 22)
+        Me.miHide.Text = "Hide"
+        '
+        'miSalir
+        '
+        Me.miSalir.Name = "miSalir"
+        Me.miSalir.Size = New System.Drawing.Size(41, 20)
+        Me.miSalir.Text = "Salir"
         '
         'lSesion
         '
@@ -189,14 +222,18 @@ Partial Class App
     Friend WithEvents tlpContenido As TableLayoutPanel
     Friend WithEvents tlpNav As TableLayoutPanel
     Friend WithEvents msMenu As MenuStrip
-    Friend WithEvents EditarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents InsertarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents ModificarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EliminarToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents VerToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents EmpleadosToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents AjustesToolStripMenuItem As ToolStripMenuItem
-    Friend WithEvents MenuLateralToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents miEditar As ToolStripMenuItem
+    Friend WithEvents miInsertar As ToolStripMenuItem
+    Friend WithEvents miModificar As ToolStripMenuItem
+    Friend WithEvents miEliminar As ToolStripMenuItem
+    Friend WithEvents miVer As ToolStripMenuItem
+    Friend WithEvents miEmpleados As ToolStripMenuItem
+    Friend WithEvents miAjustes As ToolStripMenuItem
+    Friend WithEvents miMenuLateral As ToolStripMenuItem
     Friend WithEvents lSesion As Label
     Friend WithEvents MenuLado As Menu
+    Friend WithEvents miSalir As ToolStripMenuItem
+    Friend WithEvents miShow As ToolStripMenuItem
+    Friend WithEvents miHide As ToolStripMenuItem
+    Friend WithEvents pContenido As Panel
 End Class

@@ -6,6 +6,11 @@ Public Class Controlador
     Shared dt As New DataTable
     Shared ireturn As Boolean
 
+    Dim loginWindow As LoginForm
+    Dim appWindow As App
+
+    Shared usuario As String
+
     Friend Shared Sub ConectarBBDD()
         Try
             ' Ejecutan las instrucciones dento del Try
@@ -23,7 +28,7 @@ Public Class Controlador
             SQLConnection = New MySqlConnection(vConnString.ToString)
             SQLConnection.Open()
 
-            MsgBox("Conexión establecida correctamente")
+            'MsgBox("Conexión establecida correctamente")
 
         Catch ex As MySqlException
             MsgBox("Error al conectarse a la BD", MsgBoxStyle.Critical)
@@ -41,24 +46,23 @@ Public Class Controlador
         If rd.Read Then
             claveBD = rd.GetString(0)
             If (clave = claveBD) Then
-                'App.Show()
-                'LoginForm.Close()
+                Controlador.usuario = usuario
                 rd.Close()
+
+                LoginForm.GetInstance().Hide()
+                If (App.GetInstance().Created()) Then
+                    App.GetInstance().Close()
+                End If
+                App.GetInstance().ShowDialog()
+
+                LoginForm.GetInstance().Close()
+
                 Return True
+            Else
+                rd.Close()
             End If
-        Else
-            rd.Close()
-            Return False
         End If
-
-
-
-        'If (usuario = "aalonso") Then
-        '    If (clave = "12345") Then
-        '        App.Show()
-        '        LoginForm.Close()
-        '    End If
-        'End If
+        Return False
     End Function
 
     Friend Shared Function insertar() As Boolean
@@ -88,7 +92,17 @@ Public Class Controlador
         Return ireturn
     End Function
 
-    Shared vConn As MySqlConnection
+    Friend Shared Function getUser() As String
+        Return usuario
+    End Function
+
+    Friend Shared Sub VolverLogin()
+        App.GetInstance().Hide()
+        LoginForm.GetInstance().Clear()
+        App.GetInstance().Close()
+
+        LoginForm.GetInstance().ShowDialog()
+    End Sub
 
 
 End Class

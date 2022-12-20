@@ -99,6 +99,7 @@ Partial Class Registrar
         '
         'dRegistrar
         '
+        Me.dRegistrar.Dock = System.Windows.Forms.DockStyle.Fill
         Me.dRegistrar.Location = New System.Drawing.Point(3, 48)
         Me.dRegistrar.Name = "dRegistrar"
         Me.dRegistrar.Size = New System.Drawing.Size(794, 399)
