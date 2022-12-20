@@ -33,7 +33,8 @@ Partial Class App
         Me.miModificar = New System.Windows.Forms.ToolStripMenuItem()
         Me.miEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.miVer = New System.Windows.Forms.ToolStripMenuItem()
-        Me.miEmpleados = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miTodos = New System.Windows.Forms.ToolStripMenuItem()
+        Me.miBuscar = New System.Windows.Forms.ToolStripMenuItem()
         Me.miAjustes = New System.Windows.Forms.ToolStripMenuItem()
         Me.miMenuLateral = New System.Windows.Forms.ToolStripMenuItem()
         Me.miShow = New System.Windows.Forms.ToolStripMenuItem()
@@ -146,16 +147,22 @@ Partial Class App
         '
         'miVer
         '
-        Me.miVer.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miEmpleados})
+        Me.miVer.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miTodos, Me.miBuscar})
         Me.miVer.Name = "miVer"
         Me.miVer.Size = New System.Drawing.Size(35, 20)
         Me.miVer.Text = "Ver"
         '
-        'miEmpleados
+        'miTodos
         '
-        Me.miEmpleados.Name = "miEmpleados"
-        Me.miEmpleados.Size = New System.Drawing.Size(180, 22)
-        Me.miEmpleados.Text = "Empleados"
+        Me.miTodos.Name = "miTodos"
+        Me.miTodos.Size = New System.Drawing.Size(180, 22)
+        Me.miTodos.Text = "Todos"
+        '
+        'miBuscar
+        '
+        Me.miBuscar.Name = "miBuscar"
+        Me.miBuscar.Size = New System.Drawing.Size(180, 22)
+        Me.miBuscar.Text = "Buscar"
         '
         'miAjustes
         '
@@ -168,7 +175,7 @@ Partial Class App
         '
         Me.miMenuLateral.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miShow, Me.miHide})
         Me.miMenuLateral.Name = "miMenuLateral"
-        Me.miMenuLateral.Size = New System.Drawing.Size(180, 22)
+        Me.miMenuLateral.Size = New System.Drawing.Size(140, 22)
         Me.miMenuLateral.Text = "MenuLateral"
         '
         'miShow
@@ -227,7 +234,7 @@ Partial Class App
     Friend WithEvents miModificar As ToolStripMenuItem
     Friend WithEvents miEliminar As ToolStripMenuItem
     Friend WithEvents miVer As ToolStripMenuItem
-    Friend WithEvents miEmpleados As ToolStripMenuItem
+    Friend WithEvents miTodos As ToolStripMenuItem
     Friend WithEvents miAjustes As ToolStripMenuItem
     Friend WithEvents miMenuLateral As ToolStripMenuItem
     Friend WithEvents lSesion As Label
@@ -236,4 +243,5 @@ Partial Class App
     Friend WithEvents miShow As ToolStripMenuItem
     Friend WithEvents miHide As ToolStripMenuItem
     Friend WithEvents pContenido As Panel
+    Friend WithEvents miBuscar As ToolStripMenuItem
 End Class

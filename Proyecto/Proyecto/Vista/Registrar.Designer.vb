@@ -26,7 +26,7 @@ Partial Class Registrar
         Me.tlpTitulo = New System.Windows.Forms.TableLayoutPanel()
         Me.lTituloRegistrar = New System.Windows.Forms.Label()
         Me.bGuardar = New System.Windows.Forms.Button()
-        Me.bEliminar = New System.Windows.Forms.Button()
+        Me.bVaciar = New System.Windows.Forms.Button()
         Me.dRegistrar = New Proyecto.DatosEmpleado()
         Me.tplPrincipal.SuspendLayout()
         Me.tlpTitulo.SuspendLayout()
@@ -55,7 +55,7 @@ Partial Class Registrar
         Me.tlpTitulo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.tlpTitulo.Controls.Add(Me.lTituloRegistrar, 0, 0)
         Me.tlpTitulo.Controls.Add(Me.bGuardar, 1, 0)
-        Me.tlpTitulo.Controls.Add(Me.bEliminar, 2, 0)
+        Me.tlpTitulo.Controls.Add(Me.bVaciar, 2, 0)
         Me.tlpTitulo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpTitulo.Location = New System.Drawing.Point(3, 3)
         Me.tlpTitulo.Name = "tlpTitulo"
@@ -87,15 +87,15 @@ Partial Class Registrar
         Me.bGuardar.Text = "Guardar"
         Me.bGuardar.UseVisualStyleBackColor = True
         '
-        'bEliminar
+        'bVaciar
         '
-        Me.bEliminar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.bEliminar.Location = New System.Drawing.Point(598, 3)
-        Me.bEliminar.Name = "bEliminar"
-        Me.bEliminar.Size = New System.Drawing.Size(193, 33)
-        Me.bEliminar.TabIndex = 2
-        Me.bEliminar.Text = "Eliminar"
-        Me.bEliminar.UseVisualStyleBackColor = True
+        Me.bVaciar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bVaciar.Location = New System.Drawing.Point(598, 3)
+        Me.bVaciar.Name = "bVaciar"
+        Me.bVaciar.Size = New System.Drawing.Size(193, 33)
+        Me.bVaciar.TabIndex = 2
+        Me.bVaciar.Text = "Vaciar"
+        Me.bVaciar.UseVisualStyleBackColor = True
         '
         'dRegistrar
         '
@@ -125,6 +125,6 @@ Partial Class Registrar
     Friend WithEvents tlpTitulo As TableLayoutPanel
     Friend WithEvents lTituloRegistrar As Label
     Friend WithEvents bGuardar As Button
-    Friend WithEvents bEliminar As Button
+    Friend WithEvents bVaciar As Button
     Friend WithEvents dRegistrar As DatosEmpleado
 End Class

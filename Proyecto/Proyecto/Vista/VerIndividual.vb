@@ -1,10 +1,10 @@
-﻿Public Class Ver
-    Private Shared formulario As Ver
+﻿Public Class VerIndividual
+    Private Shared formulario As VerIndividual
     'Usamos la función Shared para poder acceder a ella sin necesidad de
     'instanciar un objeto de tipo Ver
-    Public Shared Function GetInstance() As Ver
+    Public Shared Function GetInstance() As VerIndividual
         If formulario Is Nothing Then
-            formulario = New Ver()
+            formulario = New VerIndividual()
         End If
         Return formulario
     End Function

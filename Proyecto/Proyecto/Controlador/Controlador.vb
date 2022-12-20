@@ -104,5 +104,7 @@ Public Class Controlador
         LoginForm.GetInstance().ShowDialog()
     End Sub
 
-
+    Friend Shared Function getConnection() As MySqlConnection
+        Return SQLConnection
+    End Function
 End Class

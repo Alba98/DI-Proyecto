@@ -126,10 +126,10 @@
     <Import Include="System.Threading.Tasks" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Control de usuario\VerDatos.Designer.vb">
+    <Compile Include="Vista\Control de usuario\VerDatos.Designer.vb">
       <DependentUpon>VerDatos.vb</DependentUpon>
     </Compile>
-    <Compile Include="Control de usuario\VerDatos.vb">
+    <Compile Include="Vista\Control de usuario\VerDatos.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Controlador\Controlador.vb" />
@@ -139,10 +139,10 @@
     <Compile Include="Vista\App.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Control de usuario\DatosEmpleado.Designer.vb">
+    <Compile Include="Vista\Control de usuario\DatosEmpleado.Designer.vb">
       <DependentUpon>DatosEmpleado.vb</DependentUpon>
     </Compile>
-    <Compile Include="Control de usuario\DatosEmpleado.vb">
+    <Compile Include="Vista\Control de usuario\DatosEmpleado.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="Vista\Editar.Designer.vb">
@@ -158,10 +158,10 @@
       <DependentUpon>LoginForm.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Control de usuario\Menu.Designer.vb">
+    <Compile Include="Vista\Control de usuario\Menu.Designer.vb">
       <DependentUpon>Menu.vb</DependentUpon>
     </Compile>
-    <Compile Include="Control de usuario\Menu.vb">
+    <Compile Include="Vista\Control de usuario\Menu.vb">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
@@ -186,10 +186,16 @@
     <Compile Include="Vista\Registrar.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Vista\Ver.Designer.vb">
-      <DependentUpon>Ver.vb</DependentUpon>
+    <Compile Include="Vista\VerIndividual.Designer.vb">
+      <DependentUpon>VerIndividual.vb</DependentUpon>
     </Compile>
-    <Compile Include="Vista\Ver.vb">
+    <Compile Include="Vista\VerIndividual.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Vista\Buscar.Designer.vb">
+      <DependentUpon>Buscar.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Vista\Buscar.vb">
       <SubType>Form</SubType>
     </Compile>
   </ItemGroup>
@@ -197,7 +203,7 @@
     <EmbeddedResource Include="Vista\App.resx">
       <DependentUpon>App.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control de usuario\DatosEmpleado.resx">
+    <EmbeddedResource Include="Vista\Control de usuario\DatosEmpleado.resx">
       <DependentUpon>DatosEmpleado.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Editar.resx">
@@ -206,7 +212,7 @@
     <EmbeddedResource Include="Vista\LoginForm.resx">
       <DependentUpon>LoginForm.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Control de usuario\Menu.resx">
+    <EmbeddedResource Include="Vista\Control de usuario\Menu.resx">
       <DependentUpon>Menu.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
@@ -218,8 +224,11 @@
     <EmbeddedResource Include="Vista\Registrar.resx">
       <DependentUpon>Registrar.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Vista\Ver.resx">
-      <DependentUpon>Ver.vb</DependentUpon>
+    <EmbeddedResource Include="Vista\VerIndividual.resx">
+      <DependentUpon>VerIndividual.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Buscar.resx">
+      <DependentUpon>Buscar.vb</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

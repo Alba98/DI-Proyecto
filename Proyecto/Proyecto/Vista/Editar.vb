@@ -13,4 +13,8 @@ Public Class Editar
     Private Sub bGuardar_Click(sender As Object, e As EventArgs) Handles bGuardar.Click
         Controlador.insertar()
     End Sub
+
+    Private Sub Editar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        'https://www.youtube.com/watch?v=dEEkaz3WE_c
+    End Sub
 End Class

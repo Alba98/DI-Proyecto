@@ -5,7 +5,8 @@ Public Class App
 
     Dim insertar As Registrar
     Dim modificar As Editar
-    Dim verUnoAUno As Ver
+    Dim ver As VerIndividual
+    Dim verDG As Buscar
 
     'Usamos la función Shared para poder acceder a ella sin necesidad de
     'instanciar un objeto de tipo App
@@ -67,13 +68,21 @@ Public Class App
         CargarFormulario(modificar)
     End Sub
 
-    Private Sub miEmpleados_Click(sender As Object, e As EventArgs) Handles miEmpleados.Click
+    Private Sub miTodos_Click(sender As Object, e As EventArgs) Handles miTodos.Click
         'Como GetInstance es de tipo Shared no necesitamos una instancia de objeto para poder usarla
         'Simplemente la usamos con el nombre de la clase a la que pertenece
-        Ver = verUnoAUno.GetInstance()
+        ver = ver.GetInstance()
 
         'CargarFormulario carga el formulario en el panel1
-        CargarFormulario(ver)
+        CargarFormulario(Ver)
     End Sub
 
+    Private Sub miBuscar_Click(sender As Object, e As EventArgs) Handles miBuscar.Click
+        'Como GetInstance es de tipo Shared no necesitamos una instancia de objeto para poder usarla
+        'Simplemente la usamos con el nombre de la clase a la que pertenece
+        verDG = verDG.GetInstance()
+
+        'CargarFormulario carga el formulario en el panel1
+        CargarFormulario(verDG)
+    End Sub
 End Class
