@@ -37,6 +37,11 @@ Public Class App
         formulario.Show()
     End Sub
 
+    Public Sub QuitarFormulario()
+        'Borra los controles que pudiera haber en el Panel
+        pContenido.Controls.Clear()
+    End Sub
+
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles miSalir.Click
         Controlador.VolverLogin()
         Me.Close()

@@ -25,9 +25,9 @@ Partial Class Editar
         Me.tplPrincipal = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpTitulo = New System.Windows.Forms.TableLayoutPanel()
         Me.lTituloModificar = New System.Windows.Forms.Label()
-        Me.bGuardar = New System.Windows.Forms.Button()
+        Me.bActualizar = New System.Windows.Forms.Button()
         Me.bVaciar = New System.Windows.Forms.Button()
-        Me.dRegistrar = New Proyecto.DatosEmpleado()
+        Me.dEditar = New Proyecto.DatosEmpleado()
         Me.tplPrincipal.SuspendLayout()
         Me.tlpTitulo.SuspendLayout()
         Me.SuspendLayout()
@@ -37,7 +37,7 @@ Partial Class Editar
         Me.tplPrincipal.ColumnCount = 1
         Me.tplPrincipal.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
         Me.tplPrincipal.Controls.Add(Me.tlpTitulo, 0, 0)
-        Me.tplPrincipal.Controls.Add(Me.dRegistrar, 0, 1)
+        Me.tplPrincipal.Controls.Add(Me.dEditar, 0, 1)
         Me.tplPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tplPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.tplPrincipal.Name = "tplPrincipal"
@@ -54,7 +54,7 @@ Partial Class Editar
         Me.tlpTitulo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.tlpTitulo.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.tlpTitulo.Controls.Add(Me.lTituloModificar, 0, 0)
-        Me.tlpTitulo.Controls.Add(Me.bGuardar, 1, 0)
+        Me.tlpTitulo.Controls.Add(Me.bActualizar, 1, 0)
         Me.tlpTitulo.Controls.Add(Me.bVaciar, 2, 0)
         Me.tlpTitulo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpTitulo.Location = New System.Drawing.Point(3, 3)
@@ -77,15 +77,15 @@ Partial Class Editar
         Me.lTituloModificar.Text = "MODIFICAR"
         Me.lTituloModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'bGuardar
+        'bActualizar
         '
-        Me.bGuardar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.bGuardar.Location = New System.Drawing.Point(400, 3)
-        Me.bGuardar.Name = "bGuardar"
-        Me.bGuardar.Size = New System.Drawing.Size(192, 33)
-        Me.bGuardar.TabIndex = 1
-        Me.bGuardar.Text = "Guardar"
-        Me.bGuardar.UseVisualStyleBackColor = True
+        Me.bActualizar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bActualizar.Location = New System.Drawing.Point(400, 3)
+        Me.bActualizar.Name = "bActualizar"
+        Me.bActualizar.Size = New System.Drawing.Size(192, 33)
+        Me.bActualizar.TabIndex = 1
+        Me.bActualizar.Text = "Actualizar"
+        Me.bActualizar.UseVisualStyleBackColor = True
         '
         'bVaciar
         '
@@ -97,13 +97,13 @@ Partial Class Editar
         Me.bVaciar.Text = "Vaciar"
         Me.bVaciar.UseVisualStyleBackColor = True
         '
-        'dRegistrar
+        'dEditar
         '
-        Me.dRegistrar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.dRegistrar.Location = New System.Drawing.Point(3, 48)
-        Me.dRegistrar.Name = "dRegistrar"
-        Me.dRegistrar.Size = New System.Drawing.Size(794, 399)
-        Me.dRegistrar.TabIndex = 2
+        Me.dEditar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.dEditar.Location = New System.Drawing.Point(3, 48)
+        Me.dEditar.Name = "dEditar"
+        Me.dEditar.Size = New System.Drawing.Size(794, 399)
+        Me.dEditar.TabIndex = 2
         '
         'Editar
         '
@@ -124,7 +124,7 @@ Partial Class Editar
     Friend WithEvents tplPrincipal As TableLayoutPanel
     Friend WithEvents tlpTitulo As TableLayoutPanel
     Friend WithEvents lTituloModificar As Label
-    Friend WithEvents bGuardar As Button
+    Friend WithEvents bActualizar As Button
     Friend WithEvents bVaciar As Button
-    Friend WithEvents dRegistrar As DatosEmpleado
+    Friend WithEvents dEditar As DatosEmpleado
 End Class

@@ -155,13 +155,13 @@ Partial Class App
         'miTodos
         '
         Me.miTodos.Name = "miTodos"
-        Me.miTodos.Size = New System.Drawing.Size(180, 22)
+        Me.miTodos.Size = New System.Drawing.Size(109, 22)
         Me.miTodos.Text = "Todos"
         '
         'miBuscar
         '
         Me.miBuscar.Name = "miBuscar"
-        Me.miBuscar.Size = New System.Drawing.Size(180, 22)
+        Me.miBuscar.Size = New System.Drawing.Size(109, 22)
         Me.miBuscar.Text = "Buscar"
         '
         'miAjustes

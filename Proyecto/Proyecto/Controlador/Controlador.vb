@@ -37,9 +37,9 @@ Public Class Controlador
 
     Friend Shared Function login(usuario As String, clave As String) As Boolean
 
-        Dim sql As String = "SELECT clave FROM usuarios WHERE usuario = @usuario"
+        Dim sql As String = "SELECT clave FROM EMPLEADOS WHERE nombre = @nombre"
         Dim cmd As New MySqlCommand(sql, SQLConnection)
-        cmd.Parameters.AddWithValue("@usuario", usuario)
+        cmd.Parameters.AddWithValue("@nombre", usuario)
 
         Dim rd As MySqlDataReader = cmd.ExecuteReader
         Dim claveBD As String
@@ -62,10 +62,11 @@ Public Class Controlador
                 rd.Close()
             End If
         End If
+        rd.Close()
         Return False
     End Function
 
-    Friend Shared Function insertar() As Boolean
+    Friend Shared Function insertarUsuario() As Boolean
         Dim sql As String = "INSERT INTO usuarios (usuario, nombre, apellidos, email, contrasena) VALUES (@usuario, @nombre, @apellidos, @email, @contrasena)"
 
         Dim cmd = New MySqlCommand(sql, SQLConnection)
@@ -106,5 +107,78 @@ Public Class Controlador
 
     Friend Shared Function getConnection() As MySqlConnection
         Return SQLConnection
+    End Function
+
+    Friend Shared Function insertar(nombre As String, apellido1 As String, apellido2 As String, email As String, telefono As String,
+                               clave As String, fecha_nacimiento As Date, puesto As Integer)
+        Dim sql As String = "INSERT INTO EMPLEADOS (nombre, apellido1, apellido2, email, fecha_nacimiento, telefono, puesto, clave) VALUES (@nombre, @apellido1, @apellido2, @email, @fecha_nacimiento, @telefono, @puesto, @clave)"
+
+        Dim cmd = New MySqlCommand(sql, SQLConnection)
+
+        cmd.Parameters.AddWithValue("@nombre", nombre)
+        cmd.Parameters.AddWithValue("@apellido1", apellido1)
+        cmd.Parameters.AddWithValue("@apellido2", apellido2)
+        cmd.Parameters.AddWithValue("@email", email)
+        cmd.Parameters.AddWithValue("@fecha_nacimiento", fecha_nacimiento)
+        cmd.Parameters.AddWithValue("@telefono", telefono)
+        cmd.Parameters.AddWithValue("@puesto", puesto + 1)
+        cmd.Parameters.AddWithValue("@clave", clave)
+
+        Try
+            'SQLConnection.Open()
+            If cmd.ExecuteNonQuery() > 0 Then
+                ireturn = True
+            End If
+            'SQLConnection.Close()
+
+        Catch ex As Exception
+            ireturn = False
+            MsgBox(ex.Message)
+            'SQLConnection.Close()
+        End Try
+
+        Return ireturn
+    End Function
+
+    Friend Shared Function actualizar(id As Integer, nombre As String, apellido1 As String, apellido2 As String, email As String, telefono As String,
+                               clave As String, fecha_nacimiento As Date, puesto As Integer)
+        Dim sql As String = "UPDATE EMPLEADOS SET nombre=@nombre, apellido1=@apellido1, apellido2=@apellido2, email=@email,
+                            fecha_nacimiento=@fecha_nacimiento, telefono=@telefono, puesto=@puesto, clave=@clave 
+                            WHERE codigo=@id"
+
+        Dim cmd = New MySqlCommand(sql, SQLConnection)
+
+        cmd.Parameters.AddWithValue("@nombre", nombre)
+        cmd.Parameters.AddWithValue("@apellido1", apellido1)
+        cmd.Parameters.AddWithValue("@apellido2", apellido2)
+        cmd.Parameters.AddWithValue("@email", email)
+        cmd.Parameters.AddWithValue("@fecha_nacimiento", fecha_nacimiento)
+        cmd.Parameters.AddWithValue("@telefono", telefono)
+        cmd.Parameters.AddWithValue("@puesto", puesto)
+        cmd.Parameters.AddWithValue("@clave", clave)
+        cmd.Parameters.AddWithValue("@id", id)
+
+        Try
+            'SQLConnection.Open()
+            If cmd.ExecuteNonQuery() > 0 Then
+                ireturn = True
+            End If
+            'SQLConnection.Close()
+
+        Catch ex As Exception
+            ireturn = False
+            'SQLConnection.Close()
+        End Try
+
+        Return ireturn
+    End Function
+
+    Friend Shared Function getPuestos() As DataTable
+        Dim cmd As New MySqlCommand("Select nombre from PUESTO", SQLConnection)
+        Dim da As New MySqlDataAdapter
+        da.SelectCommand = cmd
+        Dim dt As New DataTable
+        da.Fill(dt)
+        Return dt
     End Function
 End Class
