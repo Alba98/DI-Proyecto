@@ -206,6 +206,9 @@
     <EmbeddedResource Include="Vista\Control de usuario\DatosEmpleado.resx">
       <DependentUpon>DatosEmpleado.vb</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Vista\Control de usuario\VerDatos.resx">
+      <DependentUpon>VerDatos.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Vista\Editar.resx">
       <DependentUpon>Editar.vb</DependentUpon>
     </EmbeddedResource>

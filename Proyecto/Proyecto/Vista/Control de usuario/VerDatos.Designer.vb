@@ -24,16 +24,13 @@ Partial Class VerDatos
     Private Sub InitializeComponent()
         Me.tlpEmpleado = New System.Windows.Forms.TableLayoutPanel()
         Me.lPuesto = New System.Windows.Forms.Label()
-        Me.cbActivo = New System.Windows.Forms.CheckBox()
-        Me.pbFoto = New System.Windows.Forms.PictureBox()
         Me.lNombre = New System.Windows.Forms.Label()
-        Me.lApellidos = New System.Windows.Forms.Label()
+        Me.lApellido1 = New System.Windows.Forms.Label()
         Me.lEmail = New System.Windows.Forms.Label()
-        Me.pbLogo = New System.Windows.Forms.PictureBox()
-        Me.ofdFoto = New System.Windows.Forms.OpenFileDialog()
+        Me.lCodigo = New System.Windows.Forms.Label()
+        Me.lTelefono = New System.Windows.Forms.Label()
+        Me.lApellido2 = New System.Windows.Forms.Label()
         Me.tlpEmpleado.SuspendLayout()
-        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).BeginInit()
-        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'tlpEmpleado
@@ -45,22 +42,22 @@ Partial Class VerDatos
         Me.tlpEmpleado.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.tlpEmpleado.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.tlpEmpleado.Controls.Add(Me.lPuesto, 0, 1)
-        Me.tlpEmpleado.Controls.Add(Me.cbActivo, 1, 5)
-        Me.tlpEmpleado.Controls.Add(Me.pbFoto, 1, 2)
-        Me.tlpEmpleado.Controls.Add(Me.lNombre, 3, 2)
-        Me.tlpEmpleado.Controls.Add(Me.lApellidos, 3, 3)
-        Me.tlpEmpleado.Controls.Add(Me.lEmail, 3, 4)
-        Me.tlpEmpleado.Controls.Add(Me.pbLogo, 3, 5)
+        Me.tlpEmpleado.Controls.Add(Me.lApellido2, 3, 3)
+        Me.tlpEmpleado.Controls.Add(Me.lTelefono, 3, 4)
+        Me.tlpEmpleado.Controls.Add(Me.lNombre, 1, 2)
+        Me.tlpEmpleado.Controls.Add(Me.lApellido1, 1, 3)
+        Me.tlpEmpleado.Controls.Add(Me.lEmail, 1, 4)
+        Me.tlpEmpleado.Controls.Add(Me.lCodigo, 3, 2)
         Me.tlpEmpleado.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpEmpleado.Location = New System.Drawing.Point(0, 0)
         Me.tlpEmpleado.Name = "tlpEmpleado"
-        Me.tlpEmpleado.RowCount = 7
+        Me.tlpEmpleado.RowCount = 6
         Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
+        Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
+        Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
         Me.tlpEmpleado.Size = New System.Drawing.Size(500, 350)
         Me.tlpEmpleado.TabIndex = 0
@@ -75,103 +72,97 @@ Partial Class VerDatos
         Me.lPuesto.ForeColor = System.Drawing.SystemColors.ControlLightLight
         Me.lPuesto.Location = New System.Drawing.Point(3, 20)
         Me.lPuesto.Name = "lPuesto"
-        Me.lPuesto.Size = New System.Drawing.Size(494, 62)
+        Me.lPuesto.Size = New System.Drawing.Size(494, 77)
         Me.lPuesto.TabIndex = 0
         Me.lPuesto.Text = "PUESTO"
         Me.lPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        '
-        'cbActivo
-        '
-        Me.cbActivo.AutoSize = True
-        Me.cbActivo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cbActivo.Location = New System.Drawing.Point(23, 271)
-        Me.cbActivo.Name = "cbActivo"
-        Me.cbActivo.Size = New System.Drawing.Size(214, 56)
-        Me.cbActivo.TabIndex = 1
-        Me.cbActivo.Text = "Activo"
-        Me.cbActivo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
-        Me.cbActivo.UseVisualStyleBackColor = True
-        '
-        'pbFoto
-        '
-        Me.pbFoto.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pbFoto.Location = New System.Drawing.Point(23, 85)
-        Me.pbFoto.Name = "pbFoto"
-        Me.tlpEmpleado.SetRowSpan(Me.pbFoto, 3)
-        Me.pbFoto.Size = New System.Drawing.Size(214, 180)
-        Me.pbFoto.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbFoto.TabIndex = 2
-        Me.pbFoto.TabStop = False
         '
         'lNombre
         '
         Me.lNombre.AutoSize = True
         Me.lNombre.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lNombre.Location = New System.Drawing.Point(263, 82)
+        Me.lNombre.Location = New System.Drawing.Point(23, 97)
         Me.lNombre.Name = "lNombre"
-        Me.lNombre.Size = New System.Drawing.Size(214, 62)
-        Me.lNombre.TabIndex = 3
+        Me.lNombre.Size = New System.Drawing.Size(214, 77)
+        Me.lNombre.TabIndex = 7
         Me.lNombre.Text = "Nombre"
         Me.lNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'lApellidos
+        'lApellido1
         '
-        Me.lApellidos.AutoSize = True
-        Me.lApellidos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lApellidos.Location = New System.Drawing.Point(263, 144)
-        Me.lApellidos.Name = "lApellidos"
-        Me.lApellidos.Size = New System.Drawing.Size(214, 62)
-        Me.lApellidos.TabIndex = 4
-        Me.lApellidos.Text = "Apellidos"
-        Me.lApellidos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        Me.lApellido1.AutoSize = True
+        Me.lApellido1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lApellido1.Location = New System.Drawing.Point(23, 174)
+        Me.lApellido1.Name = "lApellido1"
+        Me.lApellido1.Size = New System.Drawing.Size(214, 77)
+        Me.lApellido1.TabIndex = 8
+        Me.lApellido1.Text = "Apellido 1"
+        Me.lApellido1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'lEmail
         '
         Me.lEmail.AutoSize = True
         Me.lEmail.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lEmail.Location = New System.Drawing.Point(263, 206)
+        Me.lEmail.Location = New System.Drawing.Point(23, 251)
         Me.lEmail.Name = "lEmail"
-        Me.lEmail.Size = New System.Drawing.Size(214, 62)
-        Me.lEmail.TabIndex = 5
+        Me.lEmail.Size = New System.Drawing.Size(214, 77)
+        Me.lEmail.TabIndex = 9
         Me.lEmail.Text = "Email"
         Me.lEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'pbLogo
+        'lCodigo
         '
-        Me.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pbLogo.Location = New System.Drawing.Point(263, 271)
-        Me.pbLogo.Name = "pbLogo"
-        Me.pbLogo.Size = New System.Drawing.Size(214, 56)
-        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbLogo.TabIndex = 6
-        Me.pbLogo.TabStop = False
+        Me.lCodigo.AutoSize = True
+        Me.lCodigo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lCodigo.Location = New System.Drawing.Point(263, 97)
+        Me.lCodigo.Name = "lCodigo"
+        Me.lCodigo.Size = New System.Drawing.Size(214, 77)
+        Me.lCodigo.TabIndex = 10
+        Me.lCodigo.Text = "Codigo"
+        Me.lCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'ofdFoto
+        'lTelefono
         '
-        Me.ofdFoto.FileName = "ofdFoto"
+        Me.lTelefono.AutoSize = True
+        Me.lTelefono.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lTelefono.Location = New System.Drawing.Point(263, 251)
+        Me.lTelefono.Name = "lTelefono"
+        Me.lTelefono.Size = New System.Drawing.Size(214, 77)
+        Me.lTelefono.TabIndex = 5
+        Me.lTelefono.Text = "Telefono"
+        Me.lTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
-        'VerEmpleado
+        'lApellido2
+        '
+        Me.lApellido2.AutoSize = True
+        Me.lApellido2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lApellido2.Location = New System.Drawing.Point(263, 174)
+        Me.lApellido2.Name = "lApellido2"
+        Me.lApellido2.Size = New System.Drawing.Size(214, 77)
+        Me.lApellido2.TabIndex = 4
+        Me.lApellido2.Text = "Apellido 2"
+        Me.lApellido2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'VerDatos
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Controls.Add(Me.tlpEmpleado)
-        Me.Name = "VerEmpleado"
+        Me.Name = "VerDatos"
         Me.Size = New System.Drawing.Size(500, 350)
         Me.tlpEmpleado.ResumeLayout(False)
         Me.tlpEmpleado.PerformLayout()
-        CType(Me.pbFoto, System.ComponentModel.ISupportInitialize).EndInit()
-        CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
     Friend WithEvents tlpEmpleado As TableLayoutPanel
     Friend WithEvents lPuesto As Label
-    Friend WithEvents cbActivo As CheckBox
-    Friend WithEvents pbFoto As PictureBox
     Friend WithEvents lNombre As Label
-    Friend WithEvents lApellidos As Label
+    Friend WithEvents lApellido1 As Label
     Friend WithEvents lEmail As Label
-    Friend WithEvents ofdFoto As OpenFileDialog
-    Friend WithEvents pbLogo As PictureBox
+    Friend WithEvents lApellido2 As Label
+    Friend WithEvents lTelefono As Label
+    Friend WithEvents lCodigo As Label
 End Class

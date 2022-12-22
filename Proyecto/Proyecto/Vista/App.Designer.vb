@@ -24,14 +24,11 @@ Partial Class App
     Private Sub InitializeComponent()
         Me.tlpPrincipal = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpContenido = New System.Windows.Forms.TableLayoutPanel()
-        Me.MenuLado = New Proyecto.Menu()
         Me.pContenido = New System.Windows.Forms.Panel()
         Me.tlpNav = New System.Windows.Forms.TableLayoutPanel()
         Me.msMenu = New System.Windows.Forms.MenuStrip()
         Me.miEditar = New System.Windows.Forms.ToolStripMenuItem()
         Me.miInsertar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.miModificar = New System.Windows.Forms.ToolStripMenuItem()
-        Me.miEliminar = New System.Windows.Forms.ToolStripMenuItem()
         Me.miVer = New System.Windows.Forms.ToolStripMenuItem()
         Me.miTodos = New System.Windows.Forms.ToolStripMenuItem()
         Me.miBuscar = New System.Windows.Forms.ToolStripMenuItem()
@@ -41,6 +38,7 @@ Partial Class App
         Me.miHide = New System.Windows.Forms.ToolStripMenuItem()
         Me.miSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.lSesion = New System.Windows.Forms.Label()
+        Me.MenuLado = New Proyecto.Menu()
         Me.tlpPrincipal.SuspendLayout()
         Me.tlpContenido.SuspendLayout()
         Me.tlpNav.SuspendLayout()
@@ -66,9 +64,10 @@ Partial Class App
         '
         'tlpContenido
         '
-        Me.tlpContenido.ColumnCount = 2
+        Me.tlpContenido.ColumnCount = 3
         Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
+        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.0!))
+        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.0!))
         Me.tlpContenido.Controls.Add(Me.MenuLado, 0, 0)
         Me.tlpContenido.Controls.Add(Me.pContenido, 1, 0)
         Me.tlpContenido.Dock = System.Windows.Forms.DockStyle.Fill
@@ -76,17 +75,8 @@ Partial Class App
         Me.tlpContenido.Name = "tlpContenido"
         Me.tlpContenido.RowCount = 1
         Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 384.0!))
         Me.tlpContenido.Size = New System.Drawing.Size(794, 384)
         Me.tlpContenido.TabIndex = 0
-        '
-        'MenuLado
-        '
-        Me.MenuLado.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MenuLado.Location = New System.Drawing.Point(3, 3)
-        Me.MenuLado.Name = "MenuLado"
-        Me.MenuLado.Size = New System.Drawing.Size(152, 378)
-        Me.MenuLado.TabIndex = 0
         '
         'pContenido
         '
@@ -122,7 +112,7 @@ Partial Class App
         '
         'miEditar
         '
-        Me.miEditar.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miInsertar, Me.miModificar, Me.miEliminar})
+        Me.miEditar.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miInsertar})
         Me.miEditar.Name = "miEditar"
         Me.miEditar.Size = New System.Drawing.Size(49, 20)
         Me.miEditar.Text = "Editar"
@@ -132,18 +122,6 @@ Partial Class App
         Me.miInsertar.Name = "miInsertar"
         Me.miInsertar.Size = New System.Drawing.Size(125, 22)
         Me.miInsertar.Text = "Insertar"
-        '
-        'miModificar
-        '
-        Me.miModificar.Name = "miModificar"
-        Me.miModificar.Size = New System.Drawing.Size(125, 22)
-        Me.miModificar.Text = "Modificar"
-        '
-        'miEliminar
-        '
-        Me.miEliminar.Name = "miEliminar"
-        Me.miEliminar.Size = New System.Drawing.Size(125, 22)
-        Me.miEliminar.Text = "Eliminar"
         '
         'miVer
         '
@@ -206,6 +184,14 @@ Partial Class App
         Me.lSesion.TabIndex = 2
         Me.lSesion.Text = "Sesion: "
         '
+        'MenuLado
+        '
+        Me.MenuLado.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.MenuLado.Location = New System.Drawing.Point(3, 3)
+        Me.MenuLado.Name = "MenuLado"
+        Me.MenuLado.Size = New System.Drawing.Size(152, 378)
+        Me.MenuLado.TabIndex = 0
+        '
         'App
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -231,8 +217,6 @@ Partial Class App
     Friend WithEvents msMenu As MenuStrip
     Friend WithEvents miEditar As ToolStripMenuItem
     Friend WithEvents miInsertar As ToolStripMenuItem
-    Friend WithEvents miModificar As ToolStripMenuItem
-    Friend WithEvents miEliminar As ToolStripMenuItem
     Friend WithEvents miVer As ToolStripMenuItem
     Friend WithEvents miTodos As ToolStripMenuItem
     Friend WithEvents miAjustes As ToolStripMenuItem

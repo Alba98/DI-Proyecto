@@ -20,6 +20,7 @@ Public Class App
     Private Sub App_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lSesion.Text = "Sesion: " + Controlador.getUser()
         MenuLado.Hide()
+        tlpContenido.ColumnStyles(0).Width = 2
     End Sub
 
     Private Sub CargarFormulario(formulario As Form)
@@ -49,10 +50,14 @@ Public Class App
 
     Private Sub miShow_Click(sender As Object, e As EventArgs) Handles miShow.Click
         MenuLado.Show()
+        tlpContenido.ColumnStyles(0).SizeType = SizeType.Percent
+        tlpContenido.ColumnStyles(0).Width = 20
+        tlpContenido.ColumnStyles(1).Width = 80
     End Sub
 
     Private Sub miHide_Click(sender As Object, e As EventArgs) Handles miHide.Click
         MenuLado.Hide()
+        tlpContenido.ColumnStyles(0).Width = 2
     End Sub
 
     Private Sub miInsertar_Click(sender As Object, e As EventArgs) Handles miInsertar.Click
@@ -64,7 +69,7 @@ Public Class App
         CargarFormulario(insertar)
     End Sub
 
-    Private Sub miModificar_Click(sender As Object, e As EventArgs) Handles miModificar.Click
+    Private Sub miModificar_Click(sender As Object, e As EventArgs)
         'Como GetInstance es de tipo Shared no necesitamos una instancia de objeto para poder usarla
         'Simplemente la usamos con el nombre de la clase a la que pertenece
         modificar = modificar.GetInstance()
@@ -89,5 +94,9 @@ Public Class App
 
         'CargarFormulario carga el formulario en el panel1
         CargarFormulario(verDG)
+    End Sub
+
+    Private Sub MenuLado_Load(sender As Object, e As EventArgs) Handles MenuLado.Load
+
     End Sub
 End Class
