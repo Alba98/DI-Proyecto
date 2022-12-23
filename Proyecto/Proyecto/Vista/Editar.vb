@@ -1,7 +1,8 @@
 ﻿
 Public Class Editar
-    Private Shared idEmpleado As Integer
+    Public Property emple As Empleado
     Private Shared formulario As Editar
+
     'Usamos la función Shared para poder acceder a ella sin necesidad de
     'instanciar un objeto de tipo Editar
     Public Shared Function GetInstance() As Editar
@@ -13,6 +14,7 @@ Public Class Editar
 
     Private Sub Editar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         'https://www.youtube.com/watch?v=dEEkaz3WE_c
+        Me.dEditar.cargarDatos(emple.nombre, emple.apellido1, emple.apellido2, emple.email, emple.telefono, emple.clave, emple.fecha_nacimiento, emple.puesto)
     End Sub
 
     Private Sub bVaciar_Click(sender As Object, e As EventArgs) Handles bVaciar.Click
@@ -22,8 +24,8 @@ Public Class Editar
     Private Sub bActualizar_Click(sender As Object, e As EventArgs) Handles bActualizar.Click
         Try
             dEditar.validarDatos()
-            Dim actualizado = Controlador.actualizar(idEmpleado, dEditar.tbNombre.Text, dEditar.tbApellido1.Text, dEditar.tbApellido2.Text, dEditar.tbEmail.Text,
-                     dEditar.tbTelefono.Text, dEditar.tbContraseña.Text, dEditar.dtpFecha.Value, dEditar.cbPuesto.SelectedIndex)
+            Dim actualizado = Controlador.actualizar(emple.codigo, dEditar.tbNombre.Text, dEditar.tbApellido1.Text, dEditar.tbApellido2.Text, dEditar.tbEmail.Text,
+                     dEditar.tbTelefono.Text, dEditar.tbContraseña.Text, dEditar.dtpFecha.Value, dEditar.cbPuesto.SelectedIndex + 1)
 
             If actualizado Then
                 MsgBox(dEditar.tbNombre.Text + " actualizado correctamente")

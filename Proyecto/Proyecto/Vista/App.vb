@@ -82,6 +82,7 @@ Public Class App
         'Como GetInstance es de tipo Shared no necesitamos una instancia de objeto para poder usarla
         'Simplemente la usamos con el nombre de la clase a la que pertenece
         ver = ver.GetInstance()
+        ver.actualizar()
 
         'CargarFormulario carga el formulario en el panel1
         CargarFormulario(Ver)
@@ -98,5 +99,14 @@ Public Class App
 
     Private Sub MenuLado_Load(sender As Object, e As EventArgs) Handles MenuLado.Load
 
+    End Sub
+
+    Friend Sub editar(emple As Empleado)
+        'Como GetInstance es de tipo Shared no necesitamos una instancia de objeto para poder usarla
+        'Simplemente la usamos con el nombre de la clase a la que pertenece
+        modificar = modificar.GetInstance()
+        modificar.emple = emple
+        'CargarFormulario carga el formulario en el panel1
+        CargarFormulario(modificar)
     End Sub
 End Class

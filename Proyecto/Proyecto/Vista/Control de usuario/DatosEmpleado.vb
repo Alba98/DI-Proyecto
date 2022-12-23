@@ -34,7 +34,8 @@ Public Class DatosEmpleado
         tbTelefono.Clear()
         tbContraseña.Clear()
         dtpFecha.Value = DateTime.Today
-        'cbPuesto.SelectedIndex = 0
+        cbPuesto.SelectedIndex = -1
+        tbNombre.Focus()
     End Sub
 
     Public Sub validarDatos()
@@ -76,5 +77,18 @@ Public Class DatosEmpleado
         If Me.cbPuesto.SelectedIndex = -1 Then
             Throw New System.Exception("Puesto no puede estar vacio")
         End If
+    End Sub
+
+    Public Sub cargarDatos(nombre As String, apellido1 As String, apellido2 As String, email As String, telefono As String,
+                               clave As String, fecha_nacimiento As Date, puesto As Integer)
+        tbNombre.Text = nombre
+        tbApellido1.Text = apellido1
+        tbApellido2.Text = apellido2
+        tbEmail.Text = email
+        tbTelefono.Text = telefono
+        tbContraseña.Text = clave
+        dtpFecha.Value = fecha_nacimiento
+        cbPuesto.SelectedIndex = puesto
+        tbNombre.Focus()
     End Sub
 End Class

@@ -6,10 +6,25 @@ Public Class Controlador
     Shared dt As New DataTable
     Shared ireturn As Boolean
 
-    Dim loginWindow As LoginForm
-    Dim appWindow As App
-
     Shared usuario As String
+
+    Dim empleados As List(Of Empleado)
+
+    Friend Shared Function getUser() As String
+        Return usuario
+    End Function
+
+    Friend Shared Sub VolverLogin()
+        App.GetInstance().Hide()
+        LoginForm.GetInstance().Clear()
+        App.GetInstance().Close()
+
+        LoginForm.GetInstance().ShowDialog()
+    End Sub
+
+    Friend Shared Function getConnection() As MySqlConnection
+        Return SQLConnection
+    End Function
 
     Friend Shared Sub ConectarBBDD()
         Try
@@ -36,7 +51,6 @@ Public Class Controlador
     End Sub
 
     Friend Shared Function login(usuario As String, clave As String) As Boolean
-
         Dim sql As String = "SELECT clave FROM EMPLEADOS WHERE nombre = @nombre"
         Dim cmd As New MySqlCommand(sql, SQLConnection)
         cmd.Parameters.AddWithValue("@nombre", usuario)
@@ -91,22 +105,6 @@ Public Class Controlador
         End Try
 
         Return ireturn
-    End Function
-
-    Friend Shared Function getUser() As String
-        Return usuario
-    End Function
-
-    Friend Shared Sub VolverLogin()
-        App.GetInstance().Hide()
-        LoginForm.GetInstance().Clear()
-        App.GetInstance().Close()
-
-        LoginForm.GetInstance().ShowDialog()
-    End Sub
-
-    Friend Shared Function getConnection() As MySqlConnection
-        Return SQLConnection
     End Function
 
     Friend Shared Function insertar(nombre As String, apellido1 As String, apellido2 As String, email As String, telefono As String,
@@ -167,6 +165,7 @@ Public Class Controlador
 
         Catch ex As Exception
             ireturn = False
+            MsgBox(ex.Message)
             'SQLConnection.Close()
         End Try
 
@@ -180,5 +179,26 @@ Public Class Controlador
         Dim dt As New DataTable
         da.Fill(dt)
         Return dt
+    End Function
+
+    Friend Shared Function getEmpleado(idEmpleado As Integer) As Empleado
+        Dim sql As String = "SELECT * FROM EMPLEADOS WHERE codigo = @id"
+        Dim cmd As New MySqlCommand(sql, SQLConnection)
+        cmd.Parameters.AddWithValue("@id", idEmpleado)
+
+        Dim rd As MySqlDataReader = cmd.ExecuteReader
+        Dim empleado = New Empleado()
+        If rd.Read() Then
+            empleado.codigo = rd("codigo")
+            empleado.nombre = rd("nombre")
+            empleado.apellido1 = rd("apellido1")
+            empleado.apellido2 = rd("apellido2")
+            empleado.email = rd("email")
+            empleado.fecha_nacimiento = rd("fecha_nacimiento")
+            empleado.telefono = rd("telefono")
+            empleado.clave = rd("clave")
+        End If
+        rd.Close()
+        Return empleado
     End Function
 End Class
