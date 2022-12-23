@@ -1,4 +1,4 @@
-﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Status
+Imports System.Windows.Forms.VisualStyles.VisualStyleElement.Status
 
 Public Class App
     Private Shared formulario As App
@@ -19,7 +19,7 @@ Public Class App
 
     Private Sub App_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         lSesion.Text = "Sesion: " + Controlador.getUser()
-        MenuLado.Hide()
+        menuLateral.Hide()
         tlpContenido.ColumnStyles(0).Width = 2
     End Sub
 
@@ -49,14 +49,14 @@ Public Class App
     End Sub
 
     Private Sub miShow_Click(sender As Object, e As EventArgs) Handles miShow.Click
-        MenuLado.Show()
+        menuLateral.Show()
         tlpContenido.ColumnStyles(0).SizeType = SizeType.Percent
         tlpContenido.ColumnStyles(0).Width = 20
         tlpContenido.ColumnStyles(1).Width = 80
     End Sub
 
     Private Sub miHide_Click(sender As Object, e As EventArgs) Handles miHide.Click
-        MenuLado.Hide()
+        menuLateral.Hide()
         tlpContenido.ColumnStyles(0).Width = 2
     End Sub
 
@@ -79,13 +79,14 @@ Public Class App
     End Sub
 
     Private Sub miTodos_Click(sender As Object, e As EventArgs) Handles miTodos.Click
+        Controlador.getEmpleados()
         'Como GetInstance es de tipo Shared no necesitamos una instancia de objeto para poder usarla
         'Simplemente la usamos con el nombre de la clase a la que pertenece
         ver = ver.GetInstance()
-        ver.actualizar()
+        ver.actualizarInit()
 
         'CargarFormulario carga el formulario en el panel1
-        CargarFormulario(Ver)
+        CargarFormulario(ver)
     End Sub
 
     Private Sub miBuscar_Click(sender As Object, e As EventArgs) Handles miBuscar.Click
@@ -97,10 +98,6 @@ Public Class App
         CargarFormulario(verDG)
     End Sub
 
-    Private Sub MenuLado_Load(sender As Object, e As EventArgs) Handles MenuLado.Load
-
-    End Sub
-
     Friend Sub editar(emple As Empleado)
         'Como GetInstance es de tipo Shared no necesitamos una instancia de objeto para poder usarla
         'Simplemente la usamos con el nombre de la clase a la que pertenece
@@ -109,4 +106,10 @@ Public Class App
         'CargarFormulario carga el formulario en el panel1
         CargarFormulario(modificar)
     End Sub
+
+    'Private Sub mlBuscar_Click(sender As Object, e As EventArgs) Handles menuLateral.bBuscar.Click
+    '    verDG = verDG.GetInstance()
+    '    CargarFormulario(verDG)
+    'End Sub
+
 End Class

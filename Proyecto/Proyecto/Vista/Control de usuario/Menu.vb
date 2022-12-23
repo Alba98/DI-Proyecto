@@ -1,3 +1,3 @@
-﻿Public Class Menu
+Public Class Menu
 
 End Class

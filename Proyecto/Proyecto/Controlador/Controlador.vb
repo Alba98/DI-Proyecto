@@ -1,14 +1,16 @@
 ﻿Imports System.Windows.Forms.VisualStyles.VisualStyleElement
+Imports Microsoft.VisualBasic.Logging
 Imports MySql.Data.MySqlClient
 
 Public Class Controlador
-    Shared SQLConnection As MySqlConnection
-    Shared dt As New DataTable
-    Shared ireturn As Boolean
+    Private Shared SQLConnection As MySqlConnection
+    Private Shared dt As New DataTable
+    Private Shared ireturn As Boolean
 
-    Shared usuario As String
+    Private Shared usuario As String
 
-    Dim empleados As List(Of Empleado)
+    Shared Property empleados As List(Of Empleado)
+    Private Shared currIndex As Integer = 0
 
     Friend Shared Function getUser() As String
         Return usuario
@@ -28,9 +30,6 @@ Public Class Controlador
 
     Friend Shared Sub ConectarBBDD()
         Try
-            ' Ejecutan las instrucciones dento del Try
-            ' En caso que alguna de ellas se ejecute con un error, entonces, se pasa automáticamente a la sección "Catch" que es quien atrapa el error
-
             ' Crear un objeto de tipo ConnectionString
             Dim vConnString As New MySqlConnectionStringBuilder
             vConnString.Server = "localhost"
@@ -51,9 +50,9 @@ Public Class Controlador
     End Sub
 
     Friend Shared Function login(usuario As String, clave As String) As Boolean
-        Dim sql As String = "SELECT clave FROM EMPLEADOS WHERE nombre = @nombre"
+        Dim sql As String = "SELECT clave FROM EMPLEADOS WHERE nombre = @usuario"
         Dim cmd As New MySqlCommand(sql, SQLConnection)
-        cmd.Parameters.AddWithValue("@nombre", usuario)
+        cmd.Parameters.AddWithValue("@usuario", usuario)
 
         Dim rd As MySqlDataReader = cmd.ExecuteReader
         Dim claveBD As String
@@ -200,5 +199,61 @@ Public Class Controlador
         End If
         rd.Close()
         Return empleado
+    End Function
+
+    Friend Shared Sub eliminar(codEmple As Integer)
+        Dim sql As String = "DELETE FROM EMPLEADOS WHERE codigo = @codEmple"
+        Dim cmd As New MySqlCommand(sql, SQLConnection)
+        cmd.Parameters.AddWithValue("@codEmple", codEmple)
+
+        If cmd.ExecuteNonQuery() > 0 Then
+            getEmpleados()
+        End If
+    End Sub
+
+    Friend Shared Sub getEmpleados()
+        Dim sql As String = "SELECT * FROM EMPLEADOS"
+        Dim cmd As New MySqlCommand(sql, SQLConnection)
+
+        Dim rd As MySqlDataReader = cmd.ExecuteReader
+        empleados = New List(Of Empleado)
+        While rd.Read()
+            Dim empleado = New Empleado()
+            empleado.codigo = rd("codigo")
+            empleado.nombre = rd("nombre")
+            empleado.apellido1 = rd("apellido1")
+            empleado.apellido2 = rd("apellido2")
+            empleado.email = rd("email")
+            empleado.fecha_nacimiento = rd("fecha_nacimiento")
+            empleado.telefono = rd("telefono")
+            empleado.clave = rd("clave")
+            empleados.Add(empleado)
+        End While
+        rd.Close()
+    End Sub
+
+    Friend Shared Function siguienteEmple() As Empleado
+        currIndex = If(currIndex + 1 = empleados.Count, currIndex, currIndex + 1)
+        Return empleados(currIndex)
+    End Function
+
+    Friend Shared Function anteriorEmple() As Empleado
+        currIndex = If(currIndex = 0, currIndex, currIndex - 1)
+        Return empleados(currIndex)
+    End Function
+
+    Friend Shared Function getPrimerEmpleado() As Empleado
+        currIndex = 0
+        Return empleados(currIndex)
+    End Function
+
+    Friend Shared Sub EditarEmple(Cod As Integer)
+        App.GetInstance().QuitarFormulario()
+        getEmpleados()
+        App.GetInstance().editar(BuscarPorCod(Cod))
+    End Sub
+    Private Shared Function BuscarPorCod(Cod As Integer) As Empleado
+        Return empleados.Find(Function(emple) emple.codigo = Cod)
+        'Return empleados.Find(Function(emple As Empleado) emple.codigo = Cod)
     End Function
 End Class

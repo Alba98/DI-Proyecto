@@ -24,9 +24,9 @@ Partial Class Menu
     Private Sub InitializeComponent()
         Me.tlpMenu = New System.Windows.Forms.TableLayoutPanel()
         Me.bRegistrar = New System.Windows.Forms.Button()
+        Me.bVer = New System.Windows.Forms.Button()
         Me.bBuscar = New System.Windows.Forms.Button()
         Me.bSalir = New System.Windows.Forms.Button()
-        Me.bVer = New System.Windows.Forms.Button()
         Me.tlpMenu.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -65,6 +65,16 @@ Partial Class Menu
         Me.bRegistrar.Text = "Registrar"
         Me.bRegistrar.UseVisualStyleBackColor = True
         '
+        'bVer
+        '
+        Me.bVer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bVer.Location = New System.Drawing.Point(23, 98)
+        Me.bVer.Name = "bVer"
+        Me.bVer.Size = New System.Drawing.Size(138, 49)
+        Me.bVer.TabIndex = 3
+        Me.bVer.Text = "Ver"
+        Me.bVer.UseVisualStyleBackColor = True
+        '
         'bBuscar
         '
         Me.bBuscar.Dock = System.Windows.Forms.DockStyle.Fill
@@ -84,16 +94,6 @@ Partial Class Menu
         Me.bSalir.TabIndex = 5
         Me.bSalir.Text = "Salir"
         Me.bSalir.UseVisualStyleBackColor = True
-        '
-        'bVer
-        '
-        Me.bVer.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.bVer.Location = New System.Drawing.Point(23, 98)
-        Me.bVer.Name = "bVer"
-        Me.bVer.Size = New System.Drawing.Size(138, 49)
-        Me.bVer.TabIndex = 3
-        Me.bVer.Text = "Ver"
-        Me.bVer.UseVisualStyleBackColor = True
         '
         'Menu
         '

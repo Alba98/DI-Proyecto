@@ -12,17 +12,8 @@
     Dim emple As Empleado
 
     Private Sub VerIndividual_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        loadData()
-    End Sub
-
-    Private Sub loadData()
-        emple = Controlador.getEmpleado(1)
-        vDatos.lNombre.Text = emple.nombre
-        vDatos.lApellido1.Text = emple.apellido1
-        vDatos.lApellido2.Text = emple.apellido2
-        vDatos.lEmail.Text = emple.email
-        vDatos.lTelefono.Text = emple.telefono
-        vDatos.lCodigo.Text = ""
+        emple = Controlador.getPrimerEmpleado()
+        actualizar()
     End Sub
 
     Private Sub bVer_Click(sender As Object, e As EventArgs) Handles bVer.Click
@@ -34,18 +25,36 @@
     End Sub
 
     Private Sub bEliminar_Click(sender As Object, e As EventArgs) Handles bEliminar.Click
-        'App.GetInstance().eliminar(emple)
+        Try
+            Controlador.eliminar(emple.codigo)
+        Catch ex As Exception
+            MsgBox(emple.nombre + " insertado correctamente")
+            emple = Controlador.siguienteEmple()
+            actualizar()
+        End Try
     End Sub
 
     Private Sub bAnterior_Click(sender As Object, e As EventArgs) Handles bAnterior.Click
-
+        emple = Controlador.anteriorEmple()
+        actualizar()
     End Sub
 
     Private Sub bSiguiente_Click(sender As Object, e As EventArgs) Handles bSiguiente.Click
+        emple = Controlador.siguienteEmple()
+        actualizar()
+    End Sub
 
+    Friend Sub actualizarInit()
+        emple = Controlador.getPrimerEmpleado()
+        actualizar()
     End Sub
 
     Friend Sub actualizar()
-        loadData()
+        vDatos.lNombre.Text = emple.nombre
+        vDatos.lApellido1.Text = emple.apellido1
+        vDatos.lApellido2.Text = emple.apellido2
+        vDatos.lEmail.Text = emple.email
+        vDatos.lTelefono.Text = emple.telefono
+        vDatos.lCodigo.Text = emple.codigo
     End Sub
 End Class

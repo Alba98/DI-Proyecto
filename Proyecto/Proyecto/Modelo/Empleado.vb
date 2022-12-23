@@ -8,5 +8,4 @@
     Property telefono As Integer
     Property puesto As Integer
     Property clave As String
-
 End Class

@@ -38,7 +38,7 @@ Partial Class App
         Me.miHide = New System.Windows.Forms.ToolStripMenuItem()
         Me.miSalir = New System.Windows.Forms.ToolStripMenuItem()
         Me.lSesion = New System.Windows.Forms.Label()
-        Me.MenuLado = New Proyecto.Menu()
+        Me.menuLateral = New Proyecto.Menu()
         Me.tlpPrincipal.SuspendLayout()
         Me.tlpContenido.SuspendLayout()
         Me.tlpNav.SuspendLayout()
@@ -68,8 +68,8 @@ Partial Class App
         Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
         Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 78.0!))
         Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 2.0!))
-        Me.tlpContenido.Controls.Add(Me.MenuLado, 0, 0)
         Me.tlpContenido.Controls.Add(Me.pContenido, 1, 0)
+        Me.tlpContenido.Controls.Add(Me.menuLateral, 0, 0)
         Me.tlpContenido.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpContenido.Location = New System.Drawing.Point(3, 43)
         Me.tlpContenido.Name = "tlpContenido"
@@ -83,7 +83,7 @@ Partial Class App
         Me.pContenido.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pContenido.Location = New System.Drawing.Point(161, 3)
         Me.pContenido.Name = "pContenido"
-        Me.pContenido.Size = New System.Drawing.Size(630, 378)
+        Me.pContenido.Size = New System.Drawing.Size(613, 378)
         Me.pContenido.TabIndex = 1
         '
         'tlpNav
@@ -120,7 +120,7 @@ Partial Class App
         'miInsertar
         '
         Me.miInsertar.Name = "miInsertar"
-        Me.miInsertar.Size = New System.Drawing.Size(125, 22)
+        Me.miInsertar.Size = New System.Drawing.Size(113, 22)
         Me.miInsertar.Text = "Insertar"
         '
         'miVer
@@ -184,13 +184,12 @@ Partial Class App
         Me.lSesion.TabIndex = 2
         Me.lSesion.Text = "Sesion: "
         '
-        'MenuLado
+        'menuLateral
         '
-        Me.MenuLado.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.MenuLado.Location = New System.Drawing.Point(3, 3)
-        Me.MenuLado.Name = "MenuLado"
-        Me.MenuLado.Size = New System.Drawing.Size(152, 378)
-        Me.MenuLado.TabIndex = 0
+        Me.menuLateral.Location = New System.Drawing.Point(3, 3)
+        Me.menuLateral.Name = "menuLateral"
+        Me.menuLateral.Size = New System.Drawing.Size(152, 378)
+        Me.menuLateral.TabIndex = 2
         '
         'App
         '
@@ -222,10 +221,10 @@ Partial Class App
     Friend WithEvents miAjustes As ToolStripMenuItem
     Friend WithEvents miMenuLateral As ToolStripMenuItem
     Friend WithEvents lSesion As Label
-    Friend WithEvents MenuLado As Menu
     Friend WithEvents miSalir As ToolStripMenuItem
     Friend WithEvents miShow As ToolStripMenuItem
     Friend WithEvents miHide As ToolStripMenuItem
     Friend WithEvents pContenido As Panel
     Friend WithEvents miBuscar As ToolStripMenuItem
+    Friend WithEvents menuLateral As Menu
 End Class
