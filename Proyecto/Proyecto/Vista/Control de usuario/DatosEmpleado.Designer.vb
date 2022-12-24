@@ -53,7 +53,7 @@ Partial Class DatosEmpleado
         Me.tlpDatos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.0!))
         Me.tlpDatos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 25.00001!))
         Me.tlpDatos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
-        Me.tlpDatos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 39.0!))
+        Me.tlpDatos.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 43.0!))
         Me.tlpDatos.Controls.Add(Me.lNombre, 1, 1)
         Me.tlpDatos.Controls.Add(Me.lApellido1, 1, 2)
         Me.tlpDatos.Controls.Add(Me.lApellido2, 1, 3)
@@ -88,9 +88,10 @@ Partial Class DatosEmpleado
         '
         Me.lNombre.AutoSize = True
         Me.lNombre.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lNombre.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lNombre.Location = New System.Drawing.Point(23, 20)
         Me.lNombre.Name = "lNombre"
-        Me.lNombre.Size = New System.Drawing.Size(124, 59)
+        Me.lNombre.Size = New System.Drawing.Size(123, 59)
         Me.lNombre.TabIndex = 0
         Me.lNombre.Text = "Nombre"
         Me.lNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -99,9 +100,10 @@ Partial Class DatosEmpleado
         '
         Me.lApellido1.AutoSize = True
         Me.lApellido1.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lApellido1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lApellido1.Location = New System.Drawing.Point(23, 79)
         Me.lApellido1.Name = "lApellido1"
-        Me.lApellido1.Size = New System.Drawing.Size(124, 59)
+        Me.lApellido1.Size = New System.Drawing.Size(123, 59)
         Me.lApellido1.TabIndex = 1
         Me.lApellido1.Text = "Primer Apellido"
         Me.lApellido1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -110,9 +112,10 @@ Partial Class DatosEmpleado
         '
         Me.lApellido2.AutoSize = True
         Me.lApellido2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lApellido2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lApellido2.Location = New System.Drawing.Point(23, 138)
         Me.lApellido2.Name = "lApellido2"
-        Me.lApellido2.Size = New System.Drawing.Size(124, 59)
+        Me.lApellido2.Size = New System.Drawing.Size(123, 59)
         Me.lApellido2.TabIndex = 2
         Me.lApellido2.Text = "Segundo Apellido"
         Me.lApellido2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -121,9 +124,10 @@ Partial Class DatosEmpleado
         '
         Me.lEmail.AutoSize = True
         Me.lEmail.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lEmail.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lEmail.Location = New System.Drawing.Point(23, 197)
         Me.lEmail.Name = "lEmail"
-        Me.lEmail.Size = New System.Drawing.Size(124, 59)
+        Me.lEmail.Size = New System.Drawing.Size(123, 59)
         Me.lEmail.TabIndex = 3
         Me.lEmail.Text = "Email"
         Me.lEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -132,9 +136,10 @@ Partial Class DatosEmpleado
         '
         Me.lFechaNacimiento.AutoSize = True
         Me.lFechaNacimiento.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lFechaNacimiento.Location = New System.Drawing.Point(303, 20)
+        Me.lFechaNacimiento.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lFechaNacimiento.Location = New System.Drawing.Point(301, 20)
         Me.lFechaNacimiento.Name = "lFechaNacimiento"
-        Me.lFechaNacimiento.Size = New System.Drawing.Size(124, 59)
+        Me.lFechaNacimiento.Size = New System.Drawing.Size(123, 59)
         Me.lFechaNacimiento.TabIndex = 4
         Me.lFechaNacimiento.Text = "Fecha Nacimiento"
         Me.lFechaNacimiento.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -143,9 +148,10 @@ Partial Class DatosEmpleado
         '
         Me.lTelefono.AutoSize = True
         Me.lTelefono.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lTelefono.Location = New System.Drawing.Point(303, 79)
+        Me.lTelefono.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lTelefono.Location = New System.Drawing.Point(301, 79)
         Me.lTelefono.Name = "lTelefono"
-        Me.lTelefono.Size = New System.Drawing.Size(124, 59)
+        Me.lTelefono.Size = New System.Drawing.Size(123, 59)
         Me.lTelefono.TabIndex = 5
         Me.lTelefono.Text = "Telefono"
         Me.lTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -154,9 +160,10 @@ Partial Class DatosEmpleado
         '
         Me.lPuesto.AutoSize = True
         Me.lPuesto.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lPuesto.Location = New System.Drawing.Point(303, 138)
+        Me.lPuesto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lPuesto.Location = New System.Drawing.Point(301, 138)
         Me.lPuesto.Name = "lPuesto"
-        Me.lPuesto.Size = New System.Drawing.Size(124, 59)
+        Me.lPuesto.Size = New System.Drawing.Size(123, 59)
         Me.lPuesto.TabIndex = 6
         Me.lPuesto.Text = "Puesto"
         Me.lPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -165,9 +172,10 @@ Partial Class DatosEmpleado
         '
         Me.lClave.AutoSize = True
         Me.lClave.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lClave.Location = New System.Drawing.Point(303, 197)
+        Me.lClave.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lClave.Location = New System.Drawing.Point(301, 197)
         Me.lClave.Name = "lClave"
-        Me.lClave.Size = New System.Drawing.Size(124, 59)
+        Me.lClave.Size = New System.Drawing.Size(123, 59)
         Me.lClave.TabIndex = 7
         Me.lClave.Text = "Contraseña"
         Me.lClave.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -176,7 +184,7 @@ Partial Class DatosEmpleado
         '
         Me.cbGenerarClave.AutoSize = True
         Me.cbGenerarClave.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cbGenerarClave.Location = New System.Drawing.Point(564, 200)
+        Me.cbGenerarClave.Location = New System.Drawing.Point(560, 200)
         Me.cbGenerarClave.Name = "cbGenerarClave"
         Me.cbGenerarClave.Size = New System.Drawing.Size(14, 53)
         Me.cbGenerarClave.TabIndex = 8
@@ -186,74 +194,82 @@ Partial Class DatosEmpleado
         'tbNombre
         '
         Me.tbNombre.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tbNombre.Location = New System.Drawing.Point(153, 39)
+        Me.tbNombre.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbNombre.Location = New System.Drawing.Point(152, 39)
         Me.tbNombre.Name = "tbNombre"
         Me.tbNombre.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.tbNombre.Size = New System.Drawing.Size(124, 20)
+        Me.tbNombre.Size = New System.Drawing.Size(123, 21)
         Me.tbNombre.TabIndex = 9
         '
         'tbApellido1
         '
         Me.tbApellido1.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tbApellido1.Location = New System.Drawing.Point(153, 98)
+        Me.tbApellido1.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbApellido1.Location = New System.Drawing.Point(152, 98)
         Me.tbApellido1.Name = "tbApellido1"
         Me.tbApellido1.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.tbApellido1.Size = New System.Drawing.Size(124, 20)
+        Me.tbApellido1.Size = New System.Drawing.Size(123, 21)
         Me.tbApellido1.TabIndex = 10
         '
         'tbApellido2
         '
         Me.tbApellido2.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tbApellido2.Location = New System.Drawing.Point(153, 157)
+        Me.tbApellido2.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbApellido2.Location = New System.Drawing.Point(152, 157)
         Me.tbApellido2.Name = "tbApellido2"
         Me.tbApellido2.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.tbApellido2.Size = New System.Drawing.Size(124, 20)
+        Me.tbApellido2.Size = New System.Drawing.Size(123, 21)
         Me.tbApellido2.TabIndex = 11
         '
         'tbEmail
         '
         Me.tbEmail.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tbEmail.Location = New System.Drawing.Point(153, 216)
+        Me.tbEmail.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbEmail.Location = New System.Drawing.Point(152, 216)
         Me.tbEmail.Name = "tbEmail"
         Me.tbEmail.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.tbEmail.Size = New System.Drawing.Size(124, 20)
+        Me.tbEmail.Size = New System.Drawing.Size(123, 21)
         Me.tbEmail.TabIndex = 12
         '
         'tbTelefono
         '
         Me.tbTelefono.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tbTelefono.Location = New System.Drawing.Point(433, 98)
+        Me.tbTelefono.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbTelefono.Location = New System.Drawing.Point(430, 98)
         Me.tbTelefono.Name = "tbTelefono"
         Me.tbTelefono.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.tbTelefono.Size = New System.Drawing.Size(125, 20)
+        Me.tbTelefono.Size = New System.Drawing.Size(124, 21)
         Me.tbTelefono.TabIndex = 14
         '
         'tbContraseña
         '
         Me.tbContraseña.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.tbContraseña.Location = New System.Drawing.Point(433, 216)
+        Me.tbContraseña.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tbContraseña.Location = New System.Drawing.Point(430, 216)
         Me.tbContraseña.Name = "tbContraseña"
         Me.tbContraseña.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.tbContraseña.Size = New System.Drawing.Size(125, 20)
+        Me.tbContraseña.Size = New System.Drawing.Size(124, 21)
         Me.tbContraseña.TabIndex = 15
         '
         'cbPuesto
         '
         Me.cbPuesto.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.cbPuesto.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.cbPuesto.FormattingEnabled = True
-        Me.cbPuesto.Location = New System.Drawing.Point(433, 157)
+        Me.cbPuesto.Location = New System.Drawing.Point(430, 157)
         Me.cbPuesto.Name = "cbPuesto"
         Me.cbPuesto.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.cbPuesto.Size = New System.Drawing.Size(125, 21)
+        Me.cbPuesto.Size = New System.Drawing.Size(124, 21)
         Me.cbPuesto.TabIndex = 16
         '
         'dtpFecha
         '
         Me.dtpFecha.Anchor = CType((System.Windows.Forms.AnchorStyles.Left Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.dtpFecha.Location = New System.Drawing.Point(433, 39)
+        Me.dtpFecha.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.dtpFecha.Location = New System.Drawing.Point(430, 39)
         Me.dtpFecha.Name = "dtpFecha"
         Me.dtpFecha.RightToLeft = System.Windows.Forms.RightToLeft.No
-        Me.dtpFecha.Size = New System.Drawing.Size(125, 20)
+        Me.dtpFecha.Size = New System.Drawing.Size(124, 21)
         Me.dtpFecha.TabIndex = 17
         '
         'DatosEmpleado

@@ -31,4 +31,15 @@ Public Class Registrar
     Private Sub bVaciar_Click(sender As Object, e As EventArgs) Handles bVaciar.Click
         dRegistrar.Vaciar()
     End Sub
+
+    Private Sub Registrar_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        Dim tamFuente As Double = Me.Height * 10 / 450
+
+        tamFuente = IIf(tamFuente > 16, 16, tamFuente)
+        lTituloRegistrar.Font = New System.Drawing.Font("Verdana", tamFuente, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        bGuardar.Font = New System.Drawing.Font("Verdana", tamFuente, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        bVaciar.Font = New System.Drawing.Font("Verdana", tamFuente, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+
+
+    End Sub
 End Class

@@ -72,11 +72,12 @@ Partial Class LoginForm
         Me.lTitulo.AutoSize = True
         Me.tlpLogin.SetColumnSpan(Me.lTitulo, 2)
         Me.lTitulo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lTitulo.Location = New System.Drawing.Point(98, 233)
+        Me.lTitulo.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lTitulo.Location = New System.Drawing.Point(98, 231)
         Me.lTitulo.Name = "lTitulo"
         Me.lTitulo.Size = New System.Drawing.Size(184, 13)
         Me.lTitulo.TabIndex = 0
-        Me.lTitulo.Text = "TITULO"
+        Me.lTitulo.Text = "LOGIN"
         Me.lTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
         'pbLogo
@@ -85,7 +86,7 @@ Partial Class LoginForm
         Me.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pbLogo.Location = New System.Drawing.Point(98, 43)
         Me.pbLogo.Name = "pbLogo"
-        Me.pbLogo.Size = New System.Drawing.Size(184, 167)
+        Me.pbLogo.Size = New System.Drawing.Size(184, 165)
         Me.pbLogo.TabIndex = 1
         Me.pbLogo.TabStop = False
         '
@@ -93,9 +94,10 @@ Partial Class LoginForm
         '
         Me.tlpLogin.SetColumnSpan(Me.tUsuario, 2)
         Me.tUsuario.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tUsuario.Location = New System.Drawing.Point(98, 269)
+        Me.tUsuario.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tUsuario.Location = New System.Drawing.Point(98, 267)
         Me.tUsuario.Name = "tUsuario"
-        Me.tUsuario.Size = New System.Drawing.Size(184, 20)
+        Me.tUsuario.Size = New System.Drawing.Size(184, 21)
         Me.tUsuario.TabIndex = 2
         Me.tUsuario.Text = "Usuario"
         '
@@ -103,16 +105,18 @@ Partial Class LoginForm
         '
         Me.tlpLogin.SetColumnSpan(Me.tClave, 2)
         Me.tClave.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tClave.Location = New System.Drawing.Point(98, 315)
+        Me.tClave.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.tClave.Location = New System.Drawing.Point(98, 314)
         Me.tClave.Name = "tClave"
         Me.tClave.PasswordChar = Global.Microsoft.VisualBasic.ChrW(42)
-        Me.tClave.Size = New System.Drawing.Size(184, 20)
+        Me.tClave.Size = New System.Drawing.Size(184, 21)
         Me.tClave.TabIndex = 3
         Me.tClave.Text = "Contraseña"
         '
         'bAceptar
         '
         Me.bAceptar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bAceptar.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bAceptar.Location = New System.Drawing.Point(98, 361)
         Me.bAceptar.Name = "bAceptar"
         Me.bAceptar.Size = New System.Drawing.Size(89, 46)
@@ -123,6 +127,7 @@ Partial Class LoginForm
         'bSalir
         '
         Me.bSalir.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bSalir.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bSalir.Location = New System.Drawing.Point(193, 361)
         Me.bSalir.Name = "bSalir"
         Me.bSalir.Size = New System.Drawing.Size(89, 46)
@@ -134,9 +139,9 @@ Partial Class LoginForm
         '
         Me.cbClave.AutoSize = True
         Me.cbClave.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.cbClave.Location = New System.Drawing.Point(288, 315)
+        Me.cbClave.Location = New System.Drawing.Point(288, 314)
         Me.cbClave.Name = "cbClave"
-        Me.cbClave.Size = New System.Drawing.Size(14, 20)
+        Me.cbClave.Size = New System.Drawing.Size(14, 21)
         Me.cbClave.TabIndex = 6
         Me.cbClave.Text = "CheckBox1"
         Me.cbClave.UseVisualStyleBackColor = True

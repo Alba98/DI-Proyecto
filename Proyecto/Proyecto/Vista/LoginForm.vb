@@ -35,4 +35,13 @@
         tUsuario.Text = "Usuario"
         tClave.Text = "Clave"
     End Sub
+
+    Private Sub LoginForm_Resize(sender As Object, e As EventArgs) Handles MyBase.Resize
+        Dim tamFuente As Double = Me.Height * 8.25 / 489
+
+        tamFuente = IIf(tamFuente > 16, 16, tamFuente)
+        For Each element In tlpLogin.Controls
+            element.Font = New System.Drawing.Font("Verdana", tamFuente, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Next
+    End Sub
 End Class

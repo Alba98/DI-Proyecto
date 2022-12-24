@@ -56,9 +56,9 @@ Partial Class App
         Me.tlpPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.tlpPrincipal.Name = "tlpPrincipal"
         Me.tlpPrincipal.RowCount = 3
-        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 40.0!))
-        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 20.0!))
+        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.0!))
+        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.0!))
         Me.tlpPrincipal.Size = New System.Drawing.Size(800, 450)
         Me.tlpPrincipal.TabIndex = 0
         '
@@ -103,6 +103,7 @@ Partial Class App
         '
         'msMenu
         '
+        Me.msMenu.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.msMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miEditar, Me.miVer, Me.miAjustes, Me.miSalir})
         Me.msMenu.Location = New System.Drawing.Point(0, 0)
         Me.msMenu.Name = "msMenu"
@@ -113,71 +114,77 @@ Partial Class App
         'miEditar
         '
         Me.miEditar.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miInsertar})
+        Me.miEditar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.miEditar.Name = "miEditar"
-        Me.miEditar.Size = New System.Drawing.Size(49, 20)
+        Me.miEditar.Size = New System.Drawing.Size(56, 20)
         Me.miEditar.Text = "Editar"
         '
         'miInsertar
         '
+        Me.miInsertar.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.miInsertar.Name = "miInsertar"
-        Me.miInsertar.Size = New System.Drawing.Size(113, 22)
+        Me.miInsertar.Size = New System.Drawing.Size(125, 22)
         Me.miInsertar.Text = "Insertar"
         '
         'miVer
         '
         Me.miVer.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miTodos, Me.miBuscar})
+        Me.miVer.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.miVer.Name = "miVer"
-        Me.miVer.Size = New System.Drawing.Size(35, 20)
+        Me.miVer.Size = New System.Drawing.Size(39, 20)
         Me.miVer.Text = "Ver"
         '
         'miTodos
         '
         Me.miTodos.Name = "miTodos"
-        Me.miTodos.Size = New System.Drawing.Size(109, 22)
+        Me.miTodos.Size = New System.Drawing.Size(116, 22)
         Me.miTodos.Text = "Todos"
         '
         'miBuscar
         '
         Me.miBuscar.Name = "miBuscar"
-        Me.miBuscar.Size = New System.Drawing.Size(109, 22)
+        Me.miBuscar.Size = New System.Drawing.Size(116, 22)
         Me.miBuscar.Text = "Buscar"
         '
         'miAjustes
         '
         Me.miAjustes.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miMenuLateral})
+        Me.miAjustes.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.miAjustes.Name = "miAjustes"
-        Me.miAjustes.Size = New System.Drawing.Size(57, 20)
+        Me.miAjustes.Size = New System.Drawing.Size(66, 20)
         Me.miAjustes.Text = "Ajustes"
         '
         'miMenuLateral
         '
         Me.miMenuLateral.DropDownItems.AddRange(New System.Windows.Forms.ToolStripItem() {Me.miShow, Me.miHide})
         Me.miMenuLateral.Name = "miMenuLateral"
-        Me.miMenuLateral.Size = New System.Drawing.Size(140, 22)
+        Me.miMenuLateral.Size = New System.Drawing.Size(152, 22)
         Me.miMenuLateral.Text = "MenuLateral"
         '
         'miShow
         '
         Me.miShow.Name = "miShow"
-        Me.miShow.Size = New System.Drawing.Size(103, 22)
+        Me.miShow.Size = New System.Drawing.Size(109, 22)
         Me.miShow.Text = "Show"
         '
         'miHide
         '
         Me.miHide.Name = "miHide"
-        Me.miHide.Size = New System.Drawing.Size(103, 22)
+        Me.miHide.Size = New System.Drawing.Size(109, 22)
         Me.miHide.Text = "Hide"
         '
         'miSalir
         '
+        Me.miSalir.Font = New System.Drawing.Font("Verdana", 9.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.miSalir.Name = "miSalir"
-        Me.miSalir.Size = New System.Drawing.Size(41, 20)
+        Me.miSalir.Size = New System.Drawing.Size(46, 20)
         Me.miSalir.Text = "Salir"
         '
         'lSesion
         '
         Me.lSesion.AutoSize = True
         Me.lSesion.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lSesion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lSesion.Location = New System.Drawing.Point(3, 430)
         Me.lSesion.Name = "lSesion"
         Me.lSesion.Size = New System.Drawing.Size(794, 20)

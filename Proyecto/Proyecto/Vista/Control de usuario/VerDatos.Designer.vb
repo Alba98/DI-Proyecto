@@ -24,12 +24,12 @@ Partial Class VerDatos
     Private Sub InitializeComponent()
         Me.tlpEmpleado = New System.Windows.Forms.TableLayoutPanel()
         Me.lPuesto = New System.Windows.Forms.Label()
+        Me.lApellido2 = New System.Windows.Forms.Label()
+        Me.lTelefono = New System.Windows.Forms.Label()
         Me.lNombre = New System.Windows.Forms.Label()
         Me.lApellido1 = New System.Windows.Forms.Label()
         Me.lEmail = New System.Windows.Forms.Label()
         Me.lCodigo = New System.Windows.Forms.Label()
-        Me.lTelefono = New System.Windows.Forms.Label()
-        Me.lApellido2 = New System.Windows.Forms.Label()
         Me.tlpEmpleado.SuspendLayout()
         Me.SuspendLayout()
         '
@@ -77,6 +77,28 @@ Partial Class VerDatos
         Me.lPuesto.Text = "PUESTO"
         Me.lPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
+        'lApellido2
+        '
+        Me.lApellido2.AutoSize = True
+        Me.lApellido2.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lApellido2.Location = New System.Drawing.Point(263, 174)
+        Me.lApellido2.Name = "lApellido2"
+        Me.lApellido2.Size = New System.Drawing.Size(214, 77)
+        Me.lApellido2.TabIndex = 4
+        Me.lApellido2.Text = "Apellido 2"
+        Me.lApellido2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'lTelefono
+        '
+        Me.lTelefono.AutoSize = True
+        Me.lTelefono.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lTelefono.Location = New System.Drawing.Point(263, 251)
+        Me.lTelefono.Name = "lTelefono"
+        Me.lTelefono.Size = New System.Drawing.Size(214, 77)
+        Me.lTelefono.TabIndex = 5
+        Me.lTelefono.Text = "Telefono"
+        Me.lTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'lNombre
         '
         Me.lNombre.AutoSize = True
@@ -120,28 +142,6 @@ Partial Class VerDatos
         Me.lCodigo.TabIndex = 10
         Me.lCodigo.Text = "Codigo"
         Me.lCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lTelefono
-        '
-        Me.lTelefono.AutoSize = True
-        Me.lTelefono.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lTelefono.Location = New System.Drawing.Point(263, 251)
-        Me.lTelefono.Name = "lTelefono"
-        Me.lTelefono.Size = New System.Drawing.Size(214, 77)
-        Me.lTelefono.TabIndex = 5
-        Me.lTelefono.Text = "Telefono"
-        Me.lTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
-        '
-        'lApellido2
-        '
-        Me.lApellido2.AutoSize = True
-        Me.lApellido2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lApellido2.Location = New System.Drawing.Point(263, 174)
-        Me.lApellido2.Name = "lApellido2"
-        Me.lApellido2.Size = New System.Drawing.Size(214, 77)
-        Me.lApellido2.TabIndex = 4
-        Me.lApellido2.Text = "Apellido 2"
-        Me.lApellido2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'VerDatos
         '

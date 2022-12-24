@@ -80,6 +80,7 @@ Partial Class Registrar
         'bGuardar
         '
         Me.bGuardar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bGuardar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.bGuardar.Location = New System.Drawing.Point(400, 3)
         Me.bGuardar.Name = "bGuardar"
         Me.bGuardar.Size = New System.Drawing.Size(192, 33)
