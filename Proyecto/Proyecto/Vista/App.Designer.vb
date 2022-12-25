@@ -22,6 +22,7 @@ Partial Class App
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(App))
         Me.tlpPrincipal = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpContenido = New System.Windows.Forms.TableLayoutPanel()
         Me.pContenido = New System.Windows.Forms.Panel()
@@ -37,12 +38,17 @@ Partial Class App
         Me.miShow = New System.Windows.Forms.ToolStripMenuItem()
         Me.miHide = New System.Windows.Forms.ToolStripMenuItem()
         Me.miSalir = New System.Windows.Forms.ToolStripMenuItem()
+        Me.tsMenu = New System.Windows.Forms.ToolStrip()
+        Me.tsbRegistrar = New System.Windows.Forms.ToolStripButton()
+        Me.tsbBuscar = New System.Windows.Forms.ToolStripButton()
+        Me.tsbVer = New System.Windows.Forms.ToolStripButton()
         Me.lSesion = New System.Windows.Forms.Label()
         Me.menuLateral = New Proyecto.Menu()
         Me.tlpPrincipal.SuspendLayout()
         Me.tlpContenido.SuspendLayout()
         Me.tlpNav.SuspendLayout()
         Me.msMenu.SuspendLayout()
+        Me.tsMenu.SuspendLayout()
         Me.SuspendLayout()
         '
         'tlpPrincipal
@@ -56,8 +62,8 @@ Partial Class App
         Me.tlpPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.tlpPrincipal.Name = "tlpPrincipal"
         Me.tlpPrincipal.RowCount = 3
-        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 87.0!))
+        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 7.0!))
+        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.0!))
         Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 3.0!))
         Me.tlpPrincipal.Size = New System.Drawing.Size(800, 450)
         Me.tlpPrincipal.TabIndex = 0
@@ -71,11 +77,11 @@ Partial Class App
         Me.tlpContenido.Controls.Add(Me.pContenido, 1, 0)
         Me.tlpContenido.Controls.Add(Me.menuLateral, 0, 0)
         Me.tlpContenido.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tlpContenido.Location = New System.Drawing.Point(3, 43)
+        Me.tlpContenido.Location = New System.Drawing.Point(3, 34)
         Me.tlpContenido.Name = "tlpContenido"
         Me.tlpContenido.RowCount = 1
         Me.tlpContenido.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpContenido.Size = New System.Drawing.Size(794, 384)
+        Me.tlpContenido.Size = New System.Drawing.Size(794, 399)
         Me.tlpContenido.TabIndex = 0
         '
         'pContenido
@@ -83,7 +89,7 @@ Partial Class App
         Me.pContenido.Dock = System.Windows.Forms.DockStyle.Fill
         Me.pContenido.Location = New System.Drawing.Point(161, 3)
         Me.pContenido.Name = "pContenido"
-        Me.pContenido.Size = New System.Drawing.Size(613, 378)
+        Me.pContenido.Size = New System.Drawing.Size(613, 393)
         Me.pContenido.TabIndex = 1
         '
         'tlpNav
@@ -92,13 +98,14 @@ Partial Class App
         Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.tlpNav.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 50.0!))
         Me.tlpNav.Controls.Add(Me.msMenu, 0, 0)
+        Me.tlpNav.Controls.Add(Me.tsMenu, 1, 0)
         Me.tlpNav.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpNav.Location = New System.Drawing.Point(3, 3)
         Me.tlpNav.Name = "tlpNav"
         Me.tlpNav.RowCount = 1
         Me.tlpNav.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpNav.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 34.0!))
-        Me.tlpNav.Size = New System.Drawing.Size(794, 34)
+        Me.tlpNav.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Absolute, 25.0!))
+        Me.tlpNav.Size = New System.Drawing.Size(794, 25)
         Me.tlpNav.TabIndex = 1
         '
         'msMenu
@@ -180,14 +187,51 @@ Partial Class App
         Me.miSalir.Size = New System.Drawing.Size(46, 20)
         Me.miSalir.Text = "Salir"
         '
+        'tsMenu
+        '
+        Me.tsMenu.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tsMenu.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.tsbRegistrar, Me.tsbBuscar, Me.tsbVer})
+        Me.tsMenu.Location = New System.Drawing.Point(397, 0)
+        Me.tsMenu.Name = "tsMenu"
+        Me.tsMenu.Size = New System.Drawing.Size(397, 25)
+        Me.tsMenu.TabIndex = 4
+        Me.tsMenu.Text = "ToolStrip1"
+        '
+        'tsbRegistrar
+        '
+        Me.tsbRegistrar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbRegistrar.Image = CType(resources.GetObject("tsbRegistrar.Image"), System.Drawing.Image)
+        Me.tsbRegistrar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbRegistrar.Name = "tsbRegistrar"
+        Me.tsbRegistrar.Size = New System.Drawing.Size(23, 22)
+        Me.tsbRegistrar.Text = "Insertar"
+        '
+        'tsbBuscar
+        '
+        Me.tsbBuscar.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbBuscar.Image = CType(resources.GetObject("tsbBuscar.Image"), System.Drawing.Image)
+        Me.tsbBuscar.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbBuscar.Name = "tsbBuscar"
+        Me.tsbBuscar.Size = New System.Drawing.Size(23, 22)
+        Me.tsbBuscar.Text = "Buscar"
+        '
+        'tsbVer
+        '
+        Me.tsbVer.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.tsbVer.Image = CType(resources.GetObject("tsbVer.Image"), System.Drawing.Image)
+        Me.tsbVer.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.tsbVer.Name = "tsbVer"
+        Me.tsbVer.Size = New System.Drawing.Size(23, 22)
+        Me.tsbVer.Text = "Ver"
+        '
         'lSesion
         '
         Me.lSesion.AutoSize = True
         Me.lSesion.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lSesion.Font = New System.Drawing.Font("Verdana", 8.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lSesion.Location = New System.Drawing.Point(3, 430)
+        Me.lSesion.Location = New System.Drawing.Point(3, 436)
         Me.lSesion.Name = "lSesion"
-        Me.lSesion.Size = New System.Drawing.Size(794, 20)
+        Me.lSesion.Size = New System.Drawing.Size(794, 14)
         Me.lSesion.TabIndex = 2
         Me.lSesion.Text = "Sesion: "
         '
@@ -202,8 +246,10 @@ Partial Class App
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.tlpPrincipal)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "App"
         Me.Text = "App"
         Me.tlpPrincipal.ResumeLayout(False)
@@ -213,6 +259,8 @@ Partial Class App
         Me.tlpNav.PerformLayout()
         Me.msMenu.ResumeLayout(False)
         Me.msMenu.PerformLayout()
+        Me.tsMenu.ResumeLayout(False)
+        Me.tsMenu.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -234,4 +282,8 @@ Partial Class App
     Friend WithEvents pContenido As Panel
     Friend WithEvents miBuscar As ToolStripMenuItem
     Friend WithEvents menuLateral As Menu
+    Friend WithEvents tsMenu As ToolStrip
+    Friend WithEvents tsbRegistrar As ToolStripButton
+    Friend WithEvents tsbBuscar As ToolStripButton
+    Friend WithEvents tsbVer As ToolStripButton
 End Class

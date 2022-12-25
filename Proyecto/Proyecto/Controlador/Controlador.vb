@@ -49,17 +49,17 @@ Public Class Controlador
         End Try
     End Sub
 
-    Friend Shared Function login(usuario As String, clave As String) As Boolean
-        Dim sql As String = "SELECT clave FROM EMPLEADOS WHERE nombre = @usuario"
+    Friend Shared Function login(email As String, clave As String) As Boolean
+        Dim sql As String = "SELECT clave, nombre FROM EMPLEADOS WHERE email = @email"
         Dim cmd As New MySqlCommand(sql, SQLConnection)
-        cmd.Parameters.AddWithValue("@usuario", usuario)
+        cmd.Parameters.AddWithValue("@email", email)
 
         Dim rd As MySqlDataReader = cmd.ExecuteReader
         Dim claveBD As String
-        If rd.Read Then
-            claveBD = rd.GetString(0)
+        If rd.Read() Then
+            claveBD = rd("clave")
             If (clave = claveBD) Then
-                Controlador.usuario = usuario
+                Controlador.usuario = rd("nombre")
                 rd.Close()
 
                 LoginForm.GetInstance().Hide()
@@ -244,6 +244,7 @@ Public Class Controlador
 
     Friend Shared Function getPrimerEmpleado() As Empleado
         currIndex = 0
+        getEmpleados()
         Return empleados(currIndex)
     End Function
 

@@ -22,14 +22,15 @@ Partial Class LoginForm
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.tlpLogin = New System.Windows.Forms.TableLayoutPanel()
         Me.lTitulo = New System.Windows.Forms.Label()
-        Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.tUsuario = New System.Windows.Forms.TextBox()
         Me.tClave = New System.Windows.Forms.TextBox()
         Me.bAceptar = New System.Windows.Forms.Button()
         Me.bSalir = New System.Windows.Forms.Button()
         Me.cbClave = New System.Windows.Forms.CheckBox()
+        Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.tlpLogin.SuspendLayout()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -80,16 +81,6 @@ Partial Class LoginForm
         Me.lTitulo.Text = "LOGIN"
         Me.lTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
         '
-        'pbLogo
-        '
-        Me.tlpLogin.SetColumnSpan(Me.pbLogo, 2)
-        Me.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pbLogo.Location = New System.Drawing.Point(98, 43)
-        Me.pbLogo.Name = "pbLogo"
-        Me.pbLogo.Size = New System.Drawing.Size(184, 165)
-        Me.pbLogo.TabIndex = 1
-        Me.pbLogo.TabStop = False
-        '
         'tUsuario
         '
         Me.tlpLogin.SetColumnSpan(Me.tUsuario, 2)
@@ -99,7 +90,7 @@ Partial Class LoginForm
         Me.tUsuario.Name = "tUsuario"
         Me.tUsuario.Size = New System.Drawing.Size(184, 21)
         Me.tUsuario.TabIndex = 2
-        Me.tUsuario.Text = "Usuario"
+        Me.tUsuario.Text = "Email"
         '
         'tClave
         '
@@ -146,12 +137,24 @@ Partial Class LoginForm
         Me.cbClave.Text = "CheckBox1"
         Me.cbClave.UseVisualStyleBackColor = True
         '
+        'pbLogo
+        '
+        Me.tlpLogin.SetColumnSpan(Me.pbLogo, 2)
+        Me.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pbLogo.Location = New System.Drawing.Point(98, 43)
+        Me.pbLogo.Name = "pbLogo"
+        Me.pbLogo.Size = New System.Drawing.Size(184, 165)
+        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbLogo.TabIndex = 1
+        Me.pbLogo.TabStop = False
+        '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(400, 450)
         Me.Controls.Add(Me.tlpLogin)
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "LoginForm"
         Me.Text = "LOGIN"
         Me.tlpLogin.ResumeLayout(False)

@@ -116,6 +116,23 @@ Public Class App
         Next
     End Sub
 
+    Private Sub tsbRegistrar_Click(sender As Object, e As EventArgs) Handles tsbRegistrar.Click
+        insertar = insertar.GetInstance()
+        CargarFormulario(insertar)
+    End Sub
+
+    Private Sub tsbBuscar_Click(sender As Object, e As EventArgs) Handles tsbBuscar.Click
+        verDG = verDG.GetInstance()
+        CargarFormulario(verDG)
+    End Sub
+
+    Private Sub tsbVer_Click(sender As Object, e As EventArgs) Handles tsbVer.Click
+        ver = ver.GetInstance()
+        ver.actualizarInit()
+        CargarFormulario(ver)
+    End Sub
+
+
     'Private Sub mlBuscar_Click(sender As Object, e As EventArgs) Handles menuLateral.bBuscar.Click
     '    verDG = verDG.GetInstance()
     '    CargarFormulario(verDG)

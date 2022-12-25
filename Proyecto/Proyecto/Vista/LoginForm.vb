@@ -12,7 +12,7 @@
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
         Controlador.ConectarBBDD()
-        tUsuario.Text = "aalonso"
+        tUsuario.Text = "alba@gmail.com"
         tClave.Text = "12345"
         formulario = Me
     End Sub

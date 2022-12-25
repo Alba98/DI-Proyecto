@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
@@ -127,6 +127,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Modelo\Empleado.vb" />
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="Vista\Control de usuario\VerDatos.Designer.vb">
       <DependentUpon>VerDatos.vb</DependentUpon>
     </Compile>
@@ -170,11 +175,6 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
       <DesignTime>True</DesignTime>
-    </Compile>
-    <Compile Include="My Project\Resources.Designer.vb">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <Compile Include="My Project\Settings.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -221,9 +221,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
-      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
       <CustomToolNamespace>My.Resources</CustomToolNamespace>
       <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="Vista\Registrar.resx">
       <DependentUpon>Registrar.vb</DependentUpon>
@@ -248,7 +248,27 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <None Include="RESOURCES\INSERTAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RESOURCES\LEER.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RESOURCES\BUSCAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RESOURCES\ACTUALIZAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RESOURCES\ELIMINAR.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RESOURCES\company-employee.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="RESOURCES\logo.bmp" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

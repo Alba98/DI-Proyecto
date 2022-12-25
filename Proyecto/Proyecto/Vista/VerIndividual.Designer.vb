@@ -95,6 +95,7 @@ Partial Class VerIndividual
         'bEditar
         '
         Me.bEditar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bEditar.Image = Global.Proyecto.My.Resources.Resources.ACTUALIZAR
         Me.bEditar.Location = New System.Drawing.Point(255, 3)
         Me.bEditar.Name = "bEditar"
         Me.bEditar.Size = New System.Drawing.Size(120, 33)
@@ -104,7 +105,10 @@ Partial Class VerIndividual
         '
         'bVer
         '
+        Me.bVer.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch
         Me.bVer.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bVer.Image = Global.Proyecto.My.Resources.Resources.LEER
+        Me.bVer.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft
         Me.bVer.Location = New System.Drawing.Point(129, 3)
         Me.bVer.Name = "bVer"
         Me.bVer.Size = New System.Drawing.Size(120, 33)
@@ -115,6 +119,7 @@ Partial Class VerIndividual
         'bEliminar
         '
         Me.bEliminar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.bEliminar.Image = Global.Proyecto.My.Resources.Resources.ELIMINAR
         Me.bEliminar.Location = New System.Drawing.Point(381, 3)
         Me.bEliminar.Name = "bEliminar"
         Me.bEliminar.RightToLeft = System.Windows.Forms.RightToLeft.No
