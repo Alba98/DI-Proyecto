@@ -30,4 +30,8 @@ Public Class Buscar
         Controlador.EditarEmple(id)
 
     End Sub
+
+    Private Sub lTituloModificar_Click(sender As Object, e As EventArgs) Handles lTituloModificar.Click
+
+    End Sub
 End Class

@@ -79,33 +79,6 @@ Public Class Controlador
         Return False
     End Function
 
-    Friend Shared Function insertarUsuario() As Boolean
-        Dim sql As String = "INSERT INTO usuarios (usuario, nombre, apellidos, email, contrasena) VALUES (@usuario, @nombre, @apellidos, @email, @contrasena)"
-
-        Dim cmd = New MySqlCommand(sql, SQLConnection)
-
-        cmd.Parameters.AddWithValue("@usuario", "aalonso")
-        cmd.Parameters.AddWithValue("@nombre", "Alba")
-        cmd.Parameters.AddWithValue("@apellidos", "Alonso Marmany")
-        cmd.Parameters.AddWithValue("@email", "alba.alonso@gmail.com")
-        cmd.Parameters.AddWithValue("@contrasena", "12345")
-
-        Try
-            'SQLConnection.Open()
-            If cmd.ExecuteNonQuery() > 0 Then
-                ireturn = True
-            End If
-            'SQLConnection.Close()
-
-
-        Catch ex As Exception
-            ireturn = False
-            'SQLConnection.Close()
-        End Try
-
-        Return ireturn
-    End Function
-
     Friend Shared Function insertar(nombre As String, apellido1 As String, apellido2 As String, email As String, telefono As String,
                                clave As String, fecha_nacimiento As Date, puesto As Integer)
         Dim sql As String = "INSERT INTO EMPLEADOS (nombre, apellido1, apellido2, email, fecha_nacimiento, telefono, puesto, clave) VALUES (@nombre, @apellido1, @apellido2, @email, @fecha_nacimiento, @telefono, @puesto, @clave)"

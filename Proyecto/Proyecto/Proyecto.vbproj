@@ -266,9 +266,6 @@
   <ItemGroup>
     <None Include="RESOURCES\company-employee.png" />
   </ItemGroup>
-  <ItemGroup>
-    <None Include="RESOURCES\logo.bmp" />
-  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

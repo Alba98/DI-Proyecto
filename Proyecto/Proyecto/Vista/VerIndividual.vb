@@ -26,12 +26,17 @@
 
     Private Sub bEliminar_Click(sender As Object, e As EventArgs) Handles bEliminar.Click
         Try
+            If emple.nombre = Controlador.getUser() Then
+                Throw New Exception("no puedes borrar tus datos")
+            End If
             Controlador.eliminar(emple.codigo)
-        Catch ex As Exception
-            MsgBox(emple.nombre + " insertado correctamente")
+            MsgBox(emple.nombre + " elimiado correctamente")
             emple = Controlador.siguienteEmple()
             actualizar()
+        Catch ex As Exception
+            MsgBox(ex.Message)
         End Try
+
     End Sub
 
     Private Sub bAnterior_Click(sender As Object, e As EventArgs) Handles bAnterior.Click

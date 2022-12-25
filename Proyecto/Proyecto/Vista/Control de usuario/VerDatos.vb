@@ -4,9 +4,9 @@
 
         tamFuente = IIf(tamFuente > 16, 16, tamFuente)
         For Each element In tlpEmpleado.Controls
-            element.Font = New System.Drawing.Font("Segoe UI", tamFuente, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+            element.Font = New System.Drawing.Font("Verdana", tamFuente, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Next
 
-        lPuesto.Font = New System.Drawing.Font("Segoe UI", Me.Height * 16 / 350, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        lPuesto.Font = New System.Drawing.Font("Verdana", Me.Height * 16 / 350, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
     End Sub
 End Class

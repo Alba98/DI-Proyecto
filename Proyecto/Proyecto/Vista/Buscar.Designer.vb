@@ -25,6 +25,7 @@ Partial Class Buscar
         Me.tlpPrincipal = New System.Windows.Forms.TableLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.tbBusqueda = New System.Windows.Forms.TextBox()
+        Me.lTituloModificar = New System.Windows.Forms.Label()
         Me.tlpPrincipal.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -35,8 +36,9 @@ Partial Class Buscar
         Me.tlpPrincipal.ColumnCount = 2
         Me.tlpPrincipal.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
         Me.tlpPrincipal.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.0!))
-        Me.tlpPrincipal.Controls.Add(Me.DataGridView1, 0, 1)
-        Me.tlpPrincipal.Controls.Add(Me.tbBusqueda, 0, 0)
+        Me.tlpPrincipal.Controls.Add(Me.lTituloModificar, 0, 0)
+        Me.tlpPrincipal.Controls.Add(Me.DataGridView1, 0, 2)
+        Me.tlpPrincipal.Controls.Add(Me.tbBusqueda, 0, 1)
         Me.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tlpPrincipal.Location = New System.Drawing.Point(0, 0)
         Me.tlpPrincipal.Name = "tlpPrincipal"
@@ -52,18 +54,30 @@ Partial Class Buscar
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
         Me.tlpPrincipal.SetColumnSpan(Me.DataGridView1, 2)
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.DataGridView1.Location = New System.Drawing.Point(3, 48)
+        Me.DataGridView1.Location = New System.Drawing.Point(3, 93)
         Me.DataGridView1.Name = "DataGridView1"
-        Me.DataGridView1.Size = New System.Drawing.Size(794, 399)
+        Me.DataGridView1.Size = New System.Drawing.Size(794, 354)
         Me.DataGridView1.TabIndex = 0
         '
         'tbBusqueda
         '
         Me.tbBusqueda.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.tbBusqueda.Location = New System.Drawing.Point(3, 3)
+        Me.tbBusqueda.Location = New System.Drawing.Point(3, 48)
         Me.tbBusqueda.Name = "tbBusqueda"
         Me.tbBusqueda.Size = New System.Drawing.Size(234, 20)
         Me.tbBusqueda.TabIndex = 1
+        '
+        'lTituloModificar
+        '
+        Me.lTituloModificar.AutoSize = True
+        Me.lTituloModificar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lTituloModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lTituloModificar.Location = New System.Drawing.Point(3, 0)
+        Me.lTituloModificar.Name = "lTituloModificar"
+        Me.lTituloModificar.Size = New System.Drawing.Size(234, 45)
+        Me.lTituloModificar.TabIndex = 2
+        Me.lTituloModificar.Text = "BUSCAR"
+        Me.lTituloModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Buscar
         '
@@ -84,4 +98,5 @@ Partial Class Buscar
     Friend WithEvents tlpPrincipal As TableLayoutPanel
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents tbBusqueda As TextBox
+    Friend WithEvents lTituloModificar As Label
 End Class

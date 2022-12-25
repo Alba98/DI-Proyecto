@@ -5,7 +5,7 @@ Public Class Menu
         'tamFuente = IIf(tamFuente > 16, 16, tamFuente)
         'For Each element In tlpMenu.Controls
         '    'element.MinimumSize = New System.Drawing.Size(Me.Width - 35, 50)
-        '    element.Font = New System.Drawing.Font("Segoe UI", tamFuente, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        '    element.Font = New System.Drawing.Font("Verdana", tamFuente, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         'Next
     End Sub
 End Class
