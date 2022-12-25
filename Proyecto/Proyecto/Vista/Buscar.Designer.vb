@@ -22,33 +22,35 @@ Partial Class Buscar
     'No lo modifique con el editor de código.
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
-        Me.TableLayoutPanel1 = New System.Windows.Forms.TableLayoutPanel()
+        Me.tlpPrincipal = New System.Windows.Forms.TableLayoutPanel()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.tbBusqueda = New System.Windows.Forms.TextBox()
-        Me.TableLayoutPanel1.SuspendLayout()
+        Me.tlpPrincipal.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
-        'TableLayoutPanel1
+        'tlpPrincipal
         '
-        Me.TableLayoutPanel1.ColumnCount = 2
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 20.0!))
-        Me.TableLayoutPanel1.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
-        Me.TableLayoutPanel1.Controls.Add(Me.DataGridView1, 0, 1)
-        Me.TableLayoutPanel1.Controls.Add(Me.tbBusqueda, 0, 0)
-        Me.TableLayoutPanel1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.TableLayoutPanel1.Location = New System.Drawing.Point(0, 0)
-        Me.TableLayoutPanel1.Name = "TableLayoutPanel1"
-        Me.TableLayoutPanel1.RowCount = 2
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
-        Me.TableLayoutPanel1.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 90.0!))
-        Me.TableLayoutPanel1.Size = New System.Drawing.Size(800, 450)
-        Me.TableLayoutPanel1.TabIndex = 0
+        Me.tlpPrincipal.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(226, Byte), Integer))
+        Me.tlpPrincipal.ColumnCount = 2
+        Me.tlpPrincipal.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 30.0!))
+        Me.tlpPrincipal.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.0!))
+        Me.tlpPrincipal.Controls.Add(Me.DataGridView1, 0, 1)
+        Me.tlpPrincipal.Controls.Add(Me.tbBusqueda, 0, 0)
+        Me.tlpPrincipal.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.tlpPrincipal.Location = New System.Drawing.Point(0, 0)
+        Me.tlpPrincipal.Name = "tlpPrincipal"
+        Me.tlpPrincipal.RowCount = 3
+        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 10.0!))
+        Me.tlpPrincipal.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 80.0!))
+        Me.tlpPrincipal.Size = New System.Drawing.Size(800, 450)
+        Me.tlpPrincipal.TabIndex = 0
         '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
-        Me.TableLayoutPanel1.SetColumnSpan(Me.DataGridView1, 2)
+        Me.tlpPrincipal.SetColumnSpan(Me.DataGridView1, 2)
         Me.DataGridView1.Dock = System.Windows.Forms.DockStyle.Fill
         Me.DataGridView1.Location = New System.Drawing.Point(3, 48)
         Me.DataGridView1.Name = "DataGridView1"
@@ -60,7 +62,7 @@ Partial Class Buscar
         Me.tbBusqueda.Dock = System.Windows.Forms.DockStyle.Fill
         Me.tbBusqueda.Location = New System.Drawing.Point(3, 3)
         Me.tbBusqueda.Name = "tbBusqueda"
-        Me.tbBusqueda.Size = New System.Drawing.Size(154, 20)
+        Me.tbBusqueda.Size = New System.Drawing.Size(234, 20)
         Me.tbBusqueda.TabIndex = 1
         '
         'Buscar
@@ -68,18 +70,18 @@ Partial Class Buscar
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
-        Me.Controls.Add(Me.TableLayoutPanel1)
+        Me.Controls.Add(Me.tlpPrincipal)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None
         Me.Name = "Buscar"
         Me.Text = "VerDataGrid"
-        Me.TableLayoutPanel1.ResumeLayout(False)
-        Me.TableLayoutPanel1.PerformLayout()
+        Me.tlpPrincipal.ResumeLayout(False)
+        Me.tlpPrincipal.PerformLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
 
     End Sub
 
-    Friend WithEvents TableLayoutPanel1 As TableLayoutPanel
+    Friend WithEvents tlpPrincipal As TableLayoutPanel
     Friend WithEvents DataGridView1 As DataGridView
     Friend WithEvents tbBusqueda As TextBox
 End Class

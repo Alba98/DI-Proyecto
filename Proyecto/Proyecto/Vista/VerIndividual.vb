@@ -57,4 +57,44 @@
         vDatos.lTelefono.Text = emple.telefono
         vDatos.lCodigo.Text = emple.codigo
     End Sub
+
+    Private Sub bVer_MouseEnter(sender As Object, e As EventArgs) Handles bVer.MouseEnter
+        bVer.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(88, Byte), Integer))
+    End Sub
+
+    Private Sub bVer_MouseLeave(sender As Object, e As EventArgs) Handles bVer.MouseLeave
+        bVer.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub bEditar_MouseEnter(sender As Object, e As EventArgs) Handles bEditar.MouseEnter
+        bEditar.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(88, Byte), Integer))
+    End Sub
+
+    Private Sub bEditar_MouseLeave(sender As Object, e As EventArgs) Handles bEditar.MouseLeave
+        bEditar.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub bEliminar_MouseEnter(sender As Object, e As EventArgs) Handles bEliminar.MouseEnter
+        bEliminar.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(88, Byte), Integer))
+    End Sub
+
+    Private Sub bEliminar_MouseLeave(sender As Object, e As EventArgs) Handles bEliminar.MouseLeave
+        bEliminar.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub bAnterior_MouseEnter(sender As Object, e As EventArgs) Handles bAnterior.MouseEnter
+        bAnterior.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(88, Byte), Integer))
+    End Sub
+
+    Private Sub bAnterior_MouseLeave(sender As Object, e As EventArgs) Handles bAnterior.MouseLeave
+        bAnterior.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub bSiguiente_MouseEnter(sender As Object, e As EventArgs) Handles bSiguiente.MouseEnter
+        bSiguiente.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(88, Byte), Integer))
+    End Sub
+
+    Private Sub bSiguiente_MouseLeave(sender As Object, e As EventArgs) Handles bSiguiente.MouseLeave
+        bSiguiente.BackColor = Color.Transparent
+    End Sub
 End Class

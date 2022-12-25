@@ -25,12 +25,12 @@ Partial Class LoginForm
         Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(LoginForm))
         Me.tlpLogin = New System.Windows.Forms.TableLayoutPanel()
         Me.lTitulo = New System.Windows.Forms.Label()
+        Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.tUsuario = New System.Windows.Forms.TextBox()
         Me.tClave = New System.Windows.Forms.TextBox()
         Me.bAceptar = New System.Windows.Forms.Button()
         Me.bSalir = New System.Windows.Forms.Button()
         Me.cbClave = New System.Windows.Forms.CheckBox()
-        Me.pbLogo = New System.Windows.Forms.PictureBox()
         Me.tlpLogin.SuspendLayout()
         CType(Me.pbLogo, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -80,6 +80,18 @@ Partial Class LoginForm
         Me.lTitulo.TabIndex = 0
         Me.lTitulo.Text = "LOGIN"
         Me.lTitulo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
+        '
+        'pbLogo
+        '
+        Me.tlpLogin.SetColumnSpan(Me.pbLogo, 2)
+        Me.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.pbLogo.Image = Global.Proyecto.My.Resources.Resources.company_employee1
+        Me.pbLogo.Location = New System.Drawing.Point(98, 43)
+        Me.pbLogo.Name = "pbLogo"
+        Me.pbLogo.Size = New System.Drawing.Size(184, 165)
+        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.pbLogo.TabIndex = 1
+        Me.pbLogo.TabStop = False
         '
         'tUsuario
         '
@@ -137,21 +149,11 @@ Partial Class LoginForm
         Me.cbClave.Text = "CheckBox1"
         Me.cbClave.UseVisualStyleBackColor = True
         '
-        'pbLogo
-        '
-        Me.tlpLogin.SetColumnSpan(Me.pbLogo, 2)
-        Me.pbLogo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.pbLogo.Location = New System.Drawing.Point(98, 43)
-        Me.pbLogo.Name = "pbLogo"
-        Me.pbLogo.Size = New System.Drawing.Size(184, 165)
-        Me.pbLogo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
-        Me.pbLogo.TabIndex = 1
-        Me.pbLogo.TabStop = False
-        '
         'LoginForm
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(400, 450)
         Me.Controls.Add(Me.tlpLogin)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)

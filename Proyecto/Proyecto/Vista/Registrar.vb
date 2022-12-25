@@ -42,4 +42,20 @@ Public Class Registrar
 
 
     End Sub
+
+    Private Sub bGuardar_MouseEnter(sender As Object, e As EventArgs) Handles bGuardar.MouseEnter
+        bGuardar.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(88, Byte), Integer))
+    End Sub
+
+    Private Sub bGuardar_MouseLeave(sender As Object, e As EventArgs) Handles bGuardar.MouseLeave
+        bGuardar.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub bVaciar_MouseEnter(sender As Object, e As EventArgs) Handles bVaciar.MouseEnter
+        bVaciar.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(88, Byte), Integer))
+    End Sub
+
+    Private Sub bVaciar_MouseLeave(sender As Object, e As EventArgs) Handles bVaciar.MouseLeave
+        bVaciar.BackColor = Color.Transparent
+    End Sub
 End Class

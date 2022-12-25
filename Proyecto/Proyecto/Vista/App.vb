@@ -49,15 +49,15 @@ Public Class App
     End Sub
 
     Private Sub miShow_Click(sender As Object, e As EventArgs) Handles miShow.Click
-        menuLateral.Show()
-        tlpContenido.ColumnStyles(0).SizeType = SizeType.Percent
-        tlpContenido.ColumnStyles(0).Width = 20
-        tlpContenido.ColumnStyles(1).Width = 80
+        'menuLateral.Show()
+        'tlpContenido.ColumnStyles(0).SizeType = SizeType.Percent
+        'tlpContenido.ColumnStyles(0).Width = 20
+        'tlpContenido.ColumnStyles(1).Width = 80
     End Sub
 
     Private Sub miHide_Click(sender As Object, e As EventArgs) Handles miHide.Click
-        menuLateral.Hide()
-        tlpContenido.ColumnStyles(0).Width = 2
+        'menuLateral.Hide()
+        'tlpContenido.ColumnStyles(0).Width = 2
     End Sub
 
     Private Sub miInsertar_Click(sender As Object, e As EventArgs) Handles miInsertar.Click

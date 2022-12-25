@@ -104,11 +104,13 @@ Partial Class Editar
         Me.dEditar.Name = "dEditar"
         Me.dEditar.Size = New System.Drawing.Size(794, 399)
         Me.dEditar.TabIndex = 2
+        Me.dEditar.Visible = False
         '
         'Editar
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.BackColor = System.Drawing.Color.FromArgb(CType(CType(197, Byte), Integer), CType(CType(217, Byte), Integer), CType(CType(226, Byte), Integer))
         Me.ClientSize = New System.Drawing.Size(800, 450)
         Me.Controls.Add(Me.tplPrincipal)
         Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None

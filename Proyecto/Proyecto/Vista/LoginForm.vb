@@ -44,4 +44,21 @@
             element.Font = New System.Drawing.Font("Verdana", tamFuente, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Next
     End Sub
+
+    Private Sub bAceptar_MouseEnter(sender As Object, e As EventArgs) Handles bAceptar.MouseEnter
+        bAceptar.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(88, Byte), Integer))
+    End Sub
+
+    Private Sub bAceptar_MouseLeave(sender As Object, e As EventArgs) Handles bAceptar.MouseLeave
+        bAceptar.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub bSalir_MouseEnter(sender As Object, e As EventArgs) Handles bSalir.MouseEnter
+        bSalir.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(88, Byte), Integer))
+    End Sub
+
+    Private Sub bSalir_MouseLeave(sender As Object, e As EventArgs) Handles bSalir.MouseLeave
+        bSalir.BackColor = Color.Transparent
+    End Sub
+
 End Class

@@ -37,4 +37,20 @@ Public Class Editar
             MsgBox(ex.Message)
         End Try
     End Sub
+
+    Private Sub bActualizar_MouseEnter(sender As Object, e As EventArgs) Handles bActualizar.MouseEnter
+        bActualizar.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(88, Byte), Integer))
+    End Sub
+
+    Private Sub bActualizar_MouseLeave(sender As Object, e As EventArgs) Handles bActualizar.MouseLeave
+        bActualizar.BackColor = Color.Transparent
+    End Sub
+
+    Private Sub bVaciar_MouseEnter(sender As Object, e As EventArgs) Handles bVaciar.MouseEnter
+        bVaciar.BackColor = System.Drawing.Color.FromArgb(CType(CType(205, Byte), Integer), CType(CType(221, Byte), Integer), CType(CType(88, Byte), Integer))
+    End Sub
+
+    Private Sub bVaciar_MouseLeave(sender As Object, e As EventArgs) Handles bVaciar.MouseLeave
+        bVaciar.BackColor = Color.Transparent
+    End Sub
 End Class
