@@ -13,25 +13,15 @@ Public Class Buscar
     End Function
 
     Private Sub tbBusqueda_TextChanged(sender As Object, e As EventArgs) Handles tbBusqueda.TextChanged
-        Dim cmd As New MySqlCommand("Select * from EMPLEADOS Where NOMBRE Like Concat('%',@nombre, '%')", Controlador.getConnection())
-        cmd.Parameters.AddWithValue("nombre", tbBusqueda.Text)
-        Dim da As New MySqlDataAdapter
-        da.SelectCommand = cmd
-        Dim dt As New DataTable
-        da.Fill(dt)
-        DataGridView1.DataSource = dt
+        DataGridView1.DataSource = Controlador.buscar(tbBusqueda.Text)
     End Sub
 
     Private Sub DataGridView1_CellClick(sender As Object, e As DataGridViewCellEventArgs) Handles DataGridView1.CellClick
-        Dim i, j As Integer
+        Dim i As Integer
         i = DataGridView1.CurrentRow.Index
         Dim id As Integer = DataGridView1.Item(0, i).Value
 
         Controlador.EditarEmple(id)
-
-    End Sub
-
-    Private Sub lTituloModificar_Click(sender As Object, e As EventArgs) Handles lTituloModificar.Click
 
     End Sub
 End Class

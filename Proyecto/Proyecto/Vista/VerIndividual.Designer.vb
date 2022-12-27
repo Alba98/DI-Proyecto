@@ -25,11 +25,11 @@ Partial Class VerIndividual
         Me.tlpContenido = New System.Windows.Forms.TableLayoutPanel()
         Me.bAnterior = New System.Windows.Forms.Button()
         Me.bSiguiente = New System.Windows.Forms.Button()
+        Me.vDatos = New Proyecto.VerDatos()
         Me.tlpBotones = New System.Windows.Forms.TableLayoutPanel()
         Me.bEditar = New System.Windows.Forms.Button()
         Me.bVer = New System.Windows.Forms.Button()
         Me.bEliminar = New System.Windows.Forms.Button()
-        Me.vDatos = New Proyecto.VerDatos()
         Me.tlpContenido.SuspendLayout()
         Me.tlpBotones.SuspendLayout()
         Me.SuspendLayout()
@@ -37,9 +37,9 @@ Partial Class VerIndividual
         'tlpContenido
         '
         Me.tlpContenido.ColumnCount = 3
-        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
-        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 100.0!))
-        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle())
+        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
+        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 90.0!))
+        Me.tlpContenido.ColumnStyles.Add(New System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 5.0!))
         Me.tlpContenido.Controls.Add(Me.bAnterior, 0, 0)
         Me.tlpContenido.Controls.Add(Me.bSiguiente, 2, 0)
         Me.tlpContenido.Controls.Add(Me.vDatos, 1, 1)
@@ -71,6 +71,14 @@ Partial Class VerIndividual
         Me.bSiguiente.TabIndex = 2
         Me.bSiguiente.Text = ">"
         Me.bSiguiente.UseVisualStyleBackColor = True
+        '
+        'vDatos
+        '
+        Me.vDatos.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.vDatos.Location = New System.Drawing.Point(84, 48)
+        Me.vDatos.Name = "vDatos"
+        Me.vDatos.Size = New System.Drawing.Size(632, 399)
+        Me.vDatos.TabIndex = 3
         '
         'tlpBotones
         '
@@ -127,15 +135,6 @@ Partial Class VerIndividual
         Me.bEliminar.TabIndex = 2
         Me.bEliminar.Text = "Eliminar"
         Me.bEliminar.UseVisualStyleBackColor = True
-        '
-        'vDatos
-        '
-        Me.vDatos.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
-        Me.vDatos.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.vDatos.Location = New System.Drawing.Point(84, 48)
-        Me.vDatos.Name = "vDatos"
-        Me.vDatos.Size = New System.Drawing.Size(632, 399)
-        Me.vDatos.TabIndex = 3
         '
         'VerIndividual
         '

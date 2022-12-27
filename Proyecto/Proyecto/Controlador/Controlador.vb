@@ -19,7 +19,7 @@ Public Class Controlador
     Friend Shared Sub VolverLogin()
         App.GetInstance().Hide()
         LoginForm.GetInstance().Clear()
-        App.GetInstance().Close()
+        'App.GetInstance().Close()
 
         LoginForm.GetInstance().ShowDialog()
     End Sub
@@ -64,11 +64,12 @@ Public Class Controlador
 
                 LoginForm.GetInstance().Hide()
                 If (App.GetInstance().Created()) Then
-                    App.GetInstance().Close()
+                    App.GetInstance().Show()
+                Else
+                    App.GetInstance().ShowDialog()
                 End If
-                App.GetInstance().ShowDialog()
 
-                LoginForm.GetInstance().Close()
+                'LoginForm.GetInstance().Close()
 
                 Return True
             Else
@@ -199,6 +200,7 @@ Public Class Controlador
             empleado.email = rd("email")
             empleado.fecha_nacimiento = rd("fecha_nacimiento")
             empleado.telefono = rd("telefono")
+            empleado.puesto = rd("puesto")
             empleado.clave = rd("clave")
             empleados.Add(empleado)
         End While
@@ -229,5 +231,15 @@ Public Class Controlador
     Private Shared Function BuscarPorCod(Cod As Integer) As Empleado
         Return empleados.Find(Function(emple) emple.codigo = Cod)
         'Return empleados.Find(Function(emple As Empleado) emple.codigo = Cod)
+    End Function
+
+    Friend Shared Function buscar(busqueda As String) As DataTable
+        Dim cmd As New MySqlCommand("Select `codigo`, `nombre`, `apellido1`, `apellido2`, `email`, `fecha_nacimiento`, `telefono` from EMPLEADOS Where NOMBRE Like Concat('%',@nombre, '%')", Controlador.getConnection())
+        cmd.Parameters.AddWithValue("nombre", busqueda)
+        Dim da As New MySqlDataAdapter
+        da.SelectCommand = cmd
+        Dim dt As New DataTable
+        da.Fill(dt)
+        Return dt
     End Function
 End Class

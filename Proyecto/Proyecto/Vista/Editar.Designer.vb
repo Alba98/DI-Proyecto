@@ -104,7 +104,6 @@ Partial Class Editar
         Me.dEditar.Name = "dEditar"
         Me.dEditar.Size = New System.Drawing.Size(794, 399)
         Me.dEditar.TabIndex = 2
-        Me.dEditar.Visible = False
         '
         'Editar
         '

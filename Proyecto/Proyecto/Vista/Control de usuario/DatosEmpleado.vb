@@ -3,8 +3,11 @@ Imports System.Windows.Forms.VisualStyles.VisualStyleElement
 
 Public Class DatosEmpleado
     Private Sub DatosEmpleado_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+        cargarCBPuesto()
+    End Sub
+
+    Private Sub cargarCBPuesto()
         Dim dt = Controlador.getPuestos()
-        'cbPuesto.
         If dt.Rows.Count > 0 Then
             For i As Integer = 0 To dt.Rows.Count - 1
                 cbPuesto.Items.Add(dt.Rows(i)(0))
@@ -81,6 +84,7 @@ Public Class DatosEmpleado
 
     Public Sub cargarDatos(nombre As String, apellido1 As String, apellido2 As String, email As String, telefono As String,
                                clave As String, fecha_nacimiento As Date, puesto As Integer)
+        cargarCBPuesto()
         tbNombre.Text = nombre
         tbApellido1.Text = apellido1
         tbApellido2.Text = apellido2

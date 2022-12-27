@@ -45,7 +45,6 @@ Public Class App
 
     Private Sub SalirToolStripMenuItem_Click(sender As Object, e As EventArgs) Handles miSalir.Click
         Controlador.VolverLogin()
-        Me.Close()
     End Sub
 
     Private Sub miShow_Click(sender As Object, e As EventArgs) Handles miShow.Click
@@ -131,7 +130,6 @@ Public Class App
         ver.actualizarInit()
         CargarFormulario(ver)
     End Sub
-
 
     'Private Sub mlBuscar_Click(sender As Object, e As EventArgs) Handles menuLateral.bBuscar.Click
     '    verDG = verDG.GetInstance()

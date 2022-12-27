@@ -23,9 +23,9 @@ Partial Class Buscar
     <System.Diagnostics.DebuggerStepThrough()> _
     Private Sub InitializeComponent()
         Me.tlpPrincipal = New System.Windows.Forms.TableLayoutPanel()
+        Me.lTituloModificar = New System.Windows.Forms.Label()
         Me.DataGridView1 = New System.Windows.Forms.DataGridView()
         Me.tbBusqueda = New System.Windows.Forms.TextBox()
-        Me.lTituloModificar = New System.Windows.Forms.Label()
         Me.tlpPrincipal.SuspendLayout()
         CType(Me.DataGridView1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -49,6 +49,18 @@ Partial Class Buscar
         Me.tlpPrincipal.Size = New System.Drawing.Size(800, 450)
         Me.tlpPrincipal.TabIndex = 0
         '
+        'lTituloModificar
+        '
+        Me.lTituloModificar.AutoSize = True
+        Me.lTituloModificar.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.lTituloModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.lTituloModificar.Location = New System.Drawing.Point(3, 0)
+        Me.lTituloModificar.Name = "lTituloModificar"
+        Me.lTituloModificar.Size = New System.Drawing.Size(234, 45)
+        Me.lTituloModificar.TabIndex = 2
+        Me.lTituloModificar.Text = "BUSCAR"
+        Me.lTituloModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
         'DataGridView1
         '
         Me.DataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize
@@ -66,18 +78,6 @@ Partial Class Buscar
         Me.tbBusqueda.Name = "tbBusqueda"
         Me.tbBusqueda.Size = New System.Drawing.Size(234, 20)
         Me.tbBusqueda.TabIndex = 1
-        '
-        'lTituloModificar
-        '
-        Me.lTituloModificar.AutoSize = True
-        Me.lTituloModificar.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lTituloModificar.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.25!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Italic), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.lTituloModificar.Location = New System.Drawing.Point(3, 0)
-        Me.lTituloModificar.Name = "lTituloModificar"
-        Me.lTituloModificar.Size = New System.Drawing.Size(234, 45)
-        Me.lTituloModificar.TabIndex = 2
-        Me.lTituloModificar.Text = "BUSCAR"
-        Me.lTituloModificar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
         '
         'Buscar
         '
