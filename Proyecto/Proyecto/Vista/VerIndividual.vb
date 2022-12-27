@@ -18,6 +18,7 @@
 
     Private Sub bVer_Click(sender As Object, e As EventArgs) Handles bVer.Click
         'App.GetInstance().ver(emple)
+        App.GetInstance().editar(emple)
     End Sub
 
     Private Sub bEditar_Click(sender As Object, e As EventArgs) Handles bEditar.Click

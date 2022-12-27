@@ -26,7 +26,6 @@ Partial Class App
         Me.tlpPrincipal = New System.Windows.Forms.TableLayoutPanel()
         Me.tlpContenido = New System.Windows.Forms.TableLayoutPanel()
         Me.pContenido = New System.Windows.Forms.Panel()
-        Me.menuLateral = New Proyecto.Menu()
         Me.tlpNav = New System.Windows.Forms.TableLayoutPanel()
         Me.msMenu = New System.Windows.Forms.MenuStrip()
         Me.miEditar = New System.Windows.Forms.ToolStripMenuItem()
@@ -44,6 +43,7 @@ Partial Class App
         Me.tsbBuscar = New System.Windows.Forms.ToolStripButton()
         Me.tsbVer = New System.Windows.Forms.ToolStripButton()
         Me.lSesion = New System.Windows.Forms.Label()
+        Me.menuLateral = New Proyecto.Menu()
         Me.tlpPrincipal.SuspendLayout()
         Me.tlpContenido.SuspendLayout()
         Me.tlpNav.SuspendLayout()
@@ -91,13 +91,6 @@ Partial Class App
         Me.pContenido.Name = "pContenido"
         Me.pContenido.Size = New System.Drawing.Size(613, 393)
         Me.pContenido.TabIndex = 1
-        '
-        'menuLateral
-        '
-        Me.menuLateral.Location = New System.Drawing.Point(3, 3)
-        Me.menuLateral.Name = "menuLateral"
-        Me.menuLateral.Size = New System.Drawing.Size(152, 378)
-        Me.menuLateral.TabIndex = 2
         '
         'tlpNav
         '
@@ -242,6 +235,14 @@ Partial Class App
         Me.lSesion.TabIndex = 2
         Me.lSesion.Text = "Sesion: "
         '
+        'menuLateral
+        '
+        Me.menuLateral.Dock = System.Windows.Forms.DockStyle.Fill
+        Me.menuLateral.Location = New System.Drawing.Point(3, 3)
+        Me.menuLateral.Name = "menuLateral"
+        Me.menuLateral.Size = New System.Drawing.Size(152, 378)
+        Me.menuLateral.TabIndex = 2
+        '
         'App
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -251,6 +252,7 @@ Partial Class App
         Me.Controls.Add(Me.tlpPrincipal)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "App"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "App"
         Me.tlpPrincipal.ResumeLayout(False)
         Me.tlpPrincipal.PerformLayout()

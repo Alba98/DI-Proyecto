@@ -58,7 +58,7 @@ Partial Class VerDatos
         Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.72727!))
         Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 22.72727!))
         Me.tlpEmpleado.RowStyles.Add(New System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 4.545455!))
-        Me.tlpEmpleado.Size = New System.Drawing.Size(500, 350)
+        Me.tlpEmpleado.Size = New System.Drawing.Size(391, 278)
         Me.tlpEmpleado.TabIndex = 0
         '
         'lPuesto
@@ -69,9 +69,9 @@ Partial Class VerDatos
         Me.lPuesto.Dock = System.Windows.Forms.DockStyle.Fill
         Me.lPuesto.Font = New System.Drawing.Font("Microsoft Sans Serif", 15.75!, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.lPuesto.ForeColor = System.Drawing.SystemColors.ControlLightLight
-        Me.lPuesto.Location = New System.Drawing.Point(3, 15)
+        Me.lPuesto.Location = New System.Drawing.Point(3, 12)
         Me.lPuesto.Name = "lPuesto"
-        Me.lPuesto.Size = New System.Drawing.Size(494, 79)
+        Me.lPuesto.Size = New System.Drawing.Size(385, 63)
         Me.lPuesto.TabIndex = 0
         Me.lPuesto.Text = "PUESTO"
         Me.lPuesto.TextAlign = System.Drawing.ContentAlignment.MiddleCenter
@@ -80,9 +80,9 @@ Partial Class VerDatos
         '
         Me.lApellido2.AutoSize = True
         Me.lApellido2.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lApellido2.Location = New System.Drawing.Point(262, 173)
+        Me.lApellido2.Location = New System.Drawing.Point(207, 138)
         Me.lApellido2.Name = "lApellido2"
-        Me.lApellido2.Size = New System.Drawing.Size(211, 79)
+        Me.lApellido2.Size = New System.Drawing.Size(164, 63)
         Me.lApellido2.TabIndex = 4
         Me.lApellido2.Text = "Apellido 2"
         Me.lApellido2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -91,9 +91,9 @@ Partial Class VerDatos
         '
         Me.lTelefono.AutoSize = True
         Me.lTelefono.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lTelefono.Location = New System.Drawing.Point(262, 252)
+        Me.lTelefono.Location = New System.Drawing.Point(207, 201)
         Me.lTelefono.Name = "lTelefono"
-        Me.lTelefono.Size = New System.Drawing.Size(211, 79)
+        Me.lTelefono.Size = New System.Drawing.Size(164, 63)
         Me.lTelefono.TabIndex = 5
         Me.lTelefono.Text = "Telefono"
         Me.lTelefono.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -102,9 +102,9 @@ Partial Class VerDatos
         '
         Me.lNombre.AutoSize = True
         Me.lNombre.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lNombre.Location = New System.Drawing.Point(24, 94)
+        Me.lNombre.Location = New System.Drawing.Point(20, 75)
         Me.lNombre.Name = "lNombre"
-        Me.lNombre.Size = New System.Drawing.Size(211, 79)
+        Me.lNombre.Size = New System.Drawing.Size(164, 63)
         Me.lNombre.TabIndex = 7
         Me.lNombre.Text = "Nombre"
         Me.lNombre.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -113,9 +113,9 @@ Partial Class VerDatos
         '
         Me.lApellido1.AutoSize = True
         Me.lApellido1.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lApellido1.Location = New System.Drawing.Point(24, 173)
+        Me.lApellido1.Location = New System.Drawing.Point(20, 138)
         Me.lApellido1.Name = "lApellido1"
-        Me.lApellido1.Size = New System.Drawing.Size(211, 79)
+        Me.lApellido1.Size = New System.Drawing.Size(164, 63)
         Me.lApellido1.TabIndex = 8
         Me.lApellido1.Text = "Apellido 1"
         Me.lApellido1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -124,9 +124,9 @@ Partial Class VerDatos
         '
         Me.lEmail.AutoSize = True
         Me.lEmail.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lEmail.Location = New System.Drawing.Point(24, 252)
+        Me.lEmail.Location = New System.Drawing.Point(20, 201)
         Me.lEmail.Name = "lEmail"
-        Me.lEmail.Size = New System.Drawing.Size(211, 79)
+        Me.lEmail.Size = New System.Drawing.Size(164, 63)
         Me.lEmail.TabIndex = 9
         Me.lEmail.Text = "Email"
         Me.lEmail.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -135,9 +135,9 @@ Partial Class VerDatos
         '
         Me.lCodigo.AutoSize = True
         Me.lCodigo.Dock = System.Windows.Forms.DockStyle.Fill
-        Me.lCodigo.Location = New System.Drawing.Point(262, 94)
+        Me.lCodigo.Location = New System.Drawing.Point(207, 75)
         Me.lCodigo.Name = "lCodigo"
-        Me.lCodigo.Size = New System.Drawing.Size(211, 79)
+        Me.lCodigo.Size = New System.Drawing.Size(164, 63)
         Me.lCodigo.TabIndex = 10
         Me.lCodigo.Text = "Codigo"
         Me.lCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
@@ -149,7 +149,7 @@ Partial Class VerDatos
         Me.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink
         Me.Controls.Add(Me.tlpEmpleado)
         Me.Name = "VerDatos"
-        Me.Size = New System.Drawing.Size(500, 350)
+        Me.Size = New System.Drawing.Size(391, 278)
         Me.tlpEmpleado.ResumeLayout(False)
         Me.tlpEmpleado.PerformLayout()
         Me.ResumeLayout(False)

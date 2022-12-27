@@ -158,6 +158,7 @@ Partial Class LoginForm
         Me.Controls.Add(Me.tlpLogin)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.Name = "LoginForm"
+        Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
         Me.Text = "LOGIN"
         Me.tlpLogin.ResumeLayout(False)
         Me.tlpLogin.PerformLayout()
