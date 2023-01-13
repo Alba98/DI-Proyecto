@@ -17,11 +17,11 @@ Public Class Controlador
     End Function
 
     Friend Shared Sub VolverLogin()
-        App.GetInstance().Hide()
+        App.GetInstance().Visible = False
         LoginForm.GetInstance().Clear()
         'App.GetInstance().Close()
 
-        LoginForm.GetInstance().ShowDialog()
+        LoginForm.GetInstance().Visible = True
     End Sub
 
     Friend Shared Function getConnection() As MySqlConnection
@@ -62,9 +62,9 @@ Public Class Controlador
                 Controlador.usuario = rd("nombre")
                 rd.Close()
 
-                LoginForm.GetInstance().Hide()
+                LoginForm.GetInstance().Show()
                 If (App.GetInstance().Created()) Then
-                    App.GetInstance().Show()
+                    App.GetInstance().Visible = False
                 Else
                     App.GetInstance().ShowDialog()
                 End If
