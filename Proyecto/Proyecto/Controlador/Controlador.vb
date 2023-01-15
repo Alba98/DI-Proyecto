@@ -46,6 +46,7 @@ Public Class Controlador
 
         Catch ex As MySqlException
             MsgBox("Error al conectarse a la BD", MsgBoxStyle.Critical)
+            LoginForm.GetInstance().Close()
         End Try
     End Sub
 

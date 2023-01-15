@@ -11,10 +11,10 @@
     End Function
 
     Private Sub LoginForm_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Controlador.ConectarBBDD()
-        tUsuario.Text = "alba@gmail.com"
-        tClave.Text = "12345"
         formulario = Me
+        Controlador.ConectarBBDD()
+        'tUsuario.Text = "alba@gmail.com"
+        'tClave.Text = "12345"
     End Sub
 
     Private Sub cbClave_CheckedChanged(sender As Object, e As EventArgs) Handles cbClave.CheckedChanged
