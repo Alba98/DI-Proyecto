@@ -55,8 +55,8 @@ Public Class App
     End Sub
 
     Private Sub miHide_Click(sender As Object, e As EventArgs) Handles miHide.Click
-        'menuLateral.Hide()
-        'tlpContenido.ColumnStyles(0).Width = 2
+        menuLateral.Hide()
+        tlpContenido.ColumnStyles(0).Width = 2
     End Sub
 
     Private Sub miInsertar_Click(sender As Object, e As EventArgs) Handles miInsertar.Click
