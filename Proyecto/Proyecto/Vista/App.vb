@@ -117,6 +117,8 @@ Public Class App
         CargarFormulario(ver)
     End Sub
 
+
+
     'Private Sub mlBuscar_Click(sender As Object, e As EventArgs) Handles menuLateral.bBuscar.Click
     '    buscarDG = buscarDG.GetInstance()
     '    CargarFormulario(buscarDG)

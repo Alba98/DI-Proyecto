@@ -8,4 +8,12 @@ Public Class Menu
         '    element.Font = New System.Drawing.Font("Verdana", tamFuente, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         'Next
     End Sub
+
+    ' Public Event click_buscar()
+    ' Private Sub bBuscar_Click(sender As Object, e As EventArgs) Handles bBuscar.Click
+    '     RaiseEvent click_buscar()
+    ' End Sub
+
+    'para lanzar evento desde la vista al añadir el control programaticamente
+    'AddHandler() control.clicikBoton, AddressOf click_buscar
 End Class

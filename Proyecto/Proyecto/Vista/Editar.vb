@@ -12,7 +12,8 @@ Public Class Editar
         Return formulario
     End Function
 
-    Private Sub Editar_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+    Private Sub Editar_Load(sender As Object, e As EventArgs) Handles MyBase.Activated
+
         Me.dEditar.cargarDatos(emple.nombre, emple.apellido1, emple.apellido2, emple.email, emple.telefono,
                                emple.clave, emple.fecha_nacimiento, emple.puesto)
     End Sub
@@ -53,4 +54,6 @@ Public Class Editar
     Private Sub bVaciar_MouseLeave(sender As Object, e As EventArgs) Handles bVaciar.MouseLeave
         bVaciar.BackColor = Color.Transparent
     End Sub
+
+
 End Class
